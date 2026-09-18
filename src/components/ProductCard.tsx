@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ShieldCheck, ExternalLink } from 'lucide-react';
+import { BookOpen, ExternalLink } from 'lucide-react';
 import StarRating from './StarRating';
 import type { Product } from '../data/products';
 
@@ -16,7 +16,7 @@ export default function ProductCard({ product, badge, compact = false }: Product
         to={`/reviews/${product.id}`}
         className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-solar-300 hover:shadow-sm transition-all"
       >
-        <img src={product.image} alt={product.name} className="w-14 h-14 rounded-lg object-cover shrink-0" />
+        <img src={product.image} alt={product.name} loading="lazy" className="w-14 h-14 rounded-lg object-cover shrink-0" />
         <div className="flex-1 min-w-0">
           <p className="text-xs text-solar-600 font-medium">{product.brand}</p>
           <p className="text-sm font-medium text-gray-900 truncate">{product.name}</p>
@@ -37,6 +37,7 @@ export default function ProductCard({ product, badge, compact = false }: Product
           <img
             src={product.image}
             alt={product.name}
+            loading="lazy"
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </Link>
@@ -45,10 +46,10 @@ export default function ProductCard({ product, badge, compact = false }: Product
             {badge}
           </span>
         )}
-        {product.testedInNigeria && (
-          <span className="absolute top-3 right-3 flex items-center gap-1 px-2 py-1 bg-green-600 text-white text-xs font-medium rounded-full">
-            <ShieldCheck className="w-3 h-3" />
-            Tested in Nigeria
+        {product.basedOnSpecsAndFeedback && (
+          <span className="absolute top-3 right-3 flex items-center gap-1 px-2 py-1 bg-trust-600 text-white text-xs font-medium rounded-full">
+            <BookOpen className="w-3 h-3" />
+            Specs & Feedback
           </span>
         )}
       </div>

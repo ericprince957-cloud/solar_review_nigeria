@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Clock, TrendingUp, Zap, Battery, Sun, Home as HomeIcon, Plug } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock, TrendingUp, Zap, Battery, Sun, Home as HomeIcon, Plug } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { products, categories, buyingGuides, blogPosts } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import StarRating from '../components/StarRating';
@@ -18,6 +19,15 @@ export default function HomePage() {
 
   return (
     <div>
+      <Helmet>
+        <title>SolarNaija — Best Solar Inverters, Batteries & Panels for Nigerian Homes (2026)</title>
+        <meta name="description" content="Find the best solar inverters, batteries, panels and solar kits for Nigerian homes. Honest reviews based on specs and buyer feedback. Updated June 2026 with current Naira prices." />
+        <meta property="og:title" content="SolarNaija — Honest Solar Equipment Reviews for Nigeria" />
+        <meta property="og:description" content="Compare solar inverters, batteries, and panels for Nigerian homes. Research-based reviews with current Naira prices." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://solarnaija.com/" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-trust-700 via-trust-800 to-trust-900 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -58,8 +68,8 @@ export default function HomePage() {
             {/* Trust signals */}
             <div className="flex flex-wrap gap-6 mt-10 pt-8 border-t border-white/10">
               <div className="flex items-center gap-2 text-sm text-gray-300">
-                <ShieldCheck className="w-5 h-5 text-green-400" />
-                <span>Tested in Nigeria</span>
+                <BookOpen className="w-5 h-5 text-green-400" />
+                <span>Specs & Buyer Feedback</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-300">
                 <Clock className="w-5 h-5 text-solar-400" />
@@ -67,7 +77,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-300">
                 <TrendingUp className="w-5 h-5 text-blue-400" />
-                <span>Independent Reviews</span>
+                <span>Independent Analysis</span>
               </div>
             </div>
           </div>
@@ -125,10 +135,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <ShieldCheck className="w-7 h-7 text-green-600" />
+                <BookOpen className="w-7 h-7 text-green-600" />
               </div>
-              <h3 className="font-bold text-gray-900 text-lg">Tested in Nigeria</h3>
-              <p className="text-gray-600 text-sm mt-2">Every product is tested in real Nigerian conditions — 35°C+ heat, voltage fluctuations, and dusty environments</p>
+              <h3 className="font-bold text-gray-900 text-lg">Research-Based Reviews</h3>
+              <p className="text-gray-600 text-sm mt-2">Every product review is based on published manufacturer specifications, verified buyer feedback, and installer consultations</p>
             </div>
             <div className="text-center p-6">
               <div className="w-14 h-14 bg-solar-100 rounded-2xl flex items-center justify-center mx-auto mb-4">

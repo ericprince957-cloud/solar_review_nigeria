@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /disclaimer
+Disallow: /methodology
+
+Sitemap: https://solarnaija.com/sitemap.xml
+
+# SolarNaija - Solar Equipment Reviews for Nigeria
+# https://solarnaija.com

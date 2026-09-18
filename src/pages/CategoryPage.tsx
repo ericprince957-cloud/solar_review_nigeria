@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { SlidersHorizontal, ArrowUpDown, ChevronDown } from 'lucide-react';
 import { products, categories } from '../data/products';
 import ProductCard from '../components/ProductCard';
@@ -46,6 +47,12 @@ export default function CategoryPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>{`Best ${category.name} for Nigerian Homes — Reviews & Prices (2026) | SolarNaija`}</title>
+        <meta name="description" content={`${category.description}. Compare ${categoryProducts.length} products with ratings, prices in Naira, and honest analysis. Updated June 2026.`} />
+        <link rel="canonical" href={`https://solarnaija.com/category/${categoryId}`} />
+      </Helmet>
+
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
