@@ -10,7 +10,6 @@ export default function NotFoundPage() {
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="text-center">
-        <div className="text-6xl mb-4">☀️</div>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Page Not Found</h1>
         <p className="text-gray-600 mb-6 max-w-md mx-auto">
           The page you're looking for doesn't exist or may have been moved. Let's get you back to finding the right solar equipment.

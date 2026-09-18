@@ -286,16 +286,15 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 hover:text-solar-600 rounded-lg"
               >
-                <span className="text-lg">{cat.icon}</span>
                 {cat.name}
               </Link>
             ))}
             <hr className="my-2" />
-            <Link to="/guides" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">📖 Buying Guides</Link>
-            <Link to="/compare" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">⚖️ Compare Products</Link>
-            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">📰 Blog & News</Link>
-            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">ℹ️ About Us</Link>
-            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">✉️ Contact</Link>
+            <Link to="/guides" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">Buying Guides</Link>
+            <Link to="/compare" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">Compare Products</Link>
+            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">Blog & News</Link>
+            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">About Us</Link>
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-solar-50 rounded-lg">Contact</Link>
           </nav>
         </div>
       )}

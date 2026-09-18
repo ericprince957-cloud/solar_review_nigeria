@@ -43,7 +43,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="px-3 py-1 bg-solar-500/20 text-solar-300 text-sm font-medium rounded-full border border-solar-500/30">
-                🇳🇬 Made for Nigerian Homes
+                Made for Nigerian Homes
               </span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
@@ -112,7 +112,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">⭐ Top Rated Products</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Top Rated Products</h2>
             <p className="text-gray-600 mt-1">Our highest-rated solar equipment, reviewed based on specs and buyer feedback</p>
           </div>
           <Link to="/compare" className="hidden sm:flex items-center gap-1 text-sm font-medium text-solar-600 hover:text-solar-700">
@@ -124,7 +124,7 @@ export default function HomePage() {
             <ProductCard
               key={product.id}
               product={product}
-              badge={i === 0 ? '🏆 Best Overall' : i === 1 ? '🥈 Runner Up' : undefined}
+              badge={i === 0 ? 'Best Overall' : i === 1 ? 'Runner Up' : undefined}
             />
           ))}
         </div>
@@ -167,7 +167,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">📝 Latest Reviews</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Latest Reviews</h2>
             <p className="text-gray-600 mt-1">Fresh reviews and updated ratings</p>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl font-bold text-white">📖 Buying Guides</h2>
+              <h2 className="text-2xl font-bold text-white">Buying Guides</h2>
               <p className="text-gray-400 mt-1">Make the right choice with our detailed guides</p>
             </div>
             <Link to="/guides" className="text-solar-400 hover:text-solar-300 text-sm font-medium flex items-center gap-1">
@@ -213,7 +213,7 @@ export default function HomePage() {
       {/* Price Comparison Quick View */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">💰 Quick Price Guide</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Quick Price Guide</h2>
           <p className="text-gray-600 mt-2">Current prices for popular solar equipment in Nigeria</p>
         </div>
         <div className="overflow-x-auto">
@@ -251,7 +251,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">📰 Latest News & Updates</h2>
+              <h2 className="text-2xl font-bold text-gray-900">Latest News & Updates</h2>
               <p className="text-gray-600 mt-1">Solar prices, policy changes, and product launches</p>
             </div>
             <Link to="/blog" className="text-solar-600 hover:text-solar-700 text-sm font-medium flex items-center gap-1">
