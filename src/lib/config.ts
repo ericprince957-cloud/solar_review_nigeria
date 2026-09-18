@@ -3,18 +3,24 @@
  * Centralizes site metadata and URL generation
  */
 
+// Determine if we're in production mode
+const isProduction = import.meta.env.PROD;
+const envUrl = import.meta.env.VITE_SITE_URL;
+
+// In production, require VITE_SITE_URL to avoid emitting localhost canonical URLs
+// In development, fall back to localhost for local testing
+const siteUrl = isProduction
+  ? (envUrl || 'https://solarnaija.com') // Production default (should be overridden)
+  : (envUrl || 'http://localhost:5173'); // Development default
+
 export const SITE_CONFIG = {
   name: 'SolarNaija',
   tagline: 'Honest Solar Equipment Reviews for Nigerian Homes',
   description: 'Research-based reviews of solar inverters, batteries, panels, and kits for Nigerian homes and businesses. Compare products, read buying guides, and make informed decisions.',
   email: 'hello@solarnaija.com',
   
-  // Read from environment variable with fallback for development
-  url: import.meta.env.VITE_SITE_URL || 'http://localhost:5173',
-  
-  // Social media (optional - only if you have accounts)
-  // twitter: '@SolarNaija',
-  // facebook: 'https://facebook.com/solarnaija',
+  // Site URL - set VITE_SITE_URL in production environment
+  url: siteUrl,
   
   // Content metadata
   lastSiteUpdate: '2026-06-15', // ISO date string

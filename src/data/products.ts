@@ -129,7 +129,7 @@ For battery pairing: Luminous recommends a 12V tubular battery of at least 150Ah
       batteryLife: 4.0,
     },
     relatedProducts: ['felicity-solar-2kva', 'blue-gate-1kva'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -218,7 +218,7 @@ Important: Professional installation is strongly recommended. The 24V battery co
       batteryLife: 4.7,
     },
     relatedProducts: ['luminous-eco-watt-1100', 'rubitek-3kva-hybrid'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -310,7 +310,7 @@ At current pricing, the Exide InvaMaster offers a strong balance of cost and exp
       batteryLife: 4.7,
     },
     relatedProducts: ['luminous-eco-watt-1100', 'felicity-solar-2kva'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -396,7 +396,7 @@ Important: Always buy from authorized dealers. Counterfeit panels are a known pr
       easeOfInstallation: 4.0,
     },
     relatedProducts: ['felicity-solar-2kva', 'complete-home-kit-3kva'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -485,7 +485,7 @@ We recommend getting quotes from at least 2-3 installers for the mounting struct
       batteryLife: 4.5,
     },
     relatedProducts: ['felicity-solar-2kva', 'jinko-450w-panel', 'tubular-battery-200ah'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -570,7 +570,7 @@ Note: This is ONLY a charge controller. You still need a separate inverter to co
       easeOfInstallation: 4.2,
     },
     relatedProducts: ['jinko-450w-panel', 'felicity-solar-2kva', 'tubular-battery-200ah'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -654,7 +654,7 @@ An important consideration: Rubitek is a newer brand in the Nigerian market comp
       batteryLife: 4.4,
     },
     relatedProducts: ['felicity-solar-2kva', 'tubular-battery-200ah', 'complete-home-kit-3kva'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -737,7 +737,7 @@ If you're unsure whether this is right for you, please contact us with your spec
       batteryLife: 3.5,
     },
     relatedProducts: ['luminous-eco-watt-1100', 'felicity-solar-2kva'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -833,7 +833,7 @@ The main barrier is upfront cost. At ₦680,000 per unit, it's a significant inv
       batteryLife: 5.0,
     },
     relatedProducts: ['felicity-solar-2kva', 'rubitek-3kva-hybrid', 'complete-home-kit-3kva'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -920,7 +920,7 @@ However, users should understand this is basic lighting - it won't illuminate an
       batteryLife: 4.5,
     },
     relatedProducts: ['sun-king-pro-400', 'sun-king-home-40-plus'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -1006,7 +1006,7 @@ User feedback indicates reliable performance in Nigerian conditions, with the Li
       batteryLife: 4.7,
     },
     relatedProducts: ['sun-king-pico-plus', 'sun-king-home-40-plus'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -1092,7 +1092,7 @@ Important note: This system is designed for lighting and phone charging only. It
       batteryLife: 4.0,
     },
     relatedProducts: ['sun-king-homeplus-max', 'sun-king-pro-400'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -1186,7 +1186,7 @@ The system is available through Sun King Nigeria's EasyBuy installment plan (app
       batteryLife: 5.0,
     },
     relatedProducts: ['sun-king-home-40-plus', 'sun-king-powerplay-pro'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
   {
@@ -1279,7 +1279,7 @@ Sun King Nigeria offers EasyBuy installment plans (approximately ₦18,000/week 
       batteryLife: 4.8,
     },
     relatedProducts: ['sun-king-homeplus-max', 'felicity-solar-2kva'],
-    updatedAt: 'June 2026',
+    updatedAt: '2026-06-15',
     basedOnSpecsAndFeedback: true,
   },
 ];

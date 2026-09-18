@@ -13,13 +13,12 @@ const pages: Record<string, { title: string; content: JSX.Element }> = {
         <p>SolarNaija ("we," "our," or "us") operates the website solarnaija.com. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website.</p>
 
         <h2 className="text-xl font-bold text-gray-900">2. Information We Collect</h2>
-        <p>We may collect the following information:</p>
+        <p>We currently collect the following information:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><strong>Contact information:</strong> Name, email address, and message content when you use our contact form</li>
-          <li><strong>Newsletter data:</strong> Email address when you subscribe to our newsletter</li>
-          <li><strong>Usage data:</strong> Pages visited, time spent on pages, browser type, and device information (collected via analytics)</li>
-          <li><strong>Cookies:</strong> Small data files stored on your device (see Cookie section below)</li>
+          <li><strong>Contact information:</strong> Name, email address, and message content when you use our contact form (submitted via Web3Forms when configured)</li>
+          <li><strong>Cookies:</strong> Small data files stored on your device for essential site functionality and cookie consent preferences (see Cookie section below)</li>
         </ul>
+        <p className="text-sm text-gray-500 mt-2"><em>Note: Newsletter subscription and analytics tracking are not currently active. If enabled in the future, this policy will be updated accordingly.</em></p>
 
         <h2 className="text-xl font-bold text-gray-900">3. How We Use Your Information</h2>
         <ul className="list-disc pl-6 space-y-1">
@@ -30,26 +29,23 @@ const pages: Record<string, { title: string; content: JSX.Element }> = {
         </ul>
 
         <h2 className="text-xl font-bold text-gray-900">4. Cookies</h2>
-        <p>We use cookies for:</p>
+        <p>We currently use the following cookies:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><strong>Essential cookies:</strong> Required for the website to function properly</li>
-          <li><strong>Analytics cookies:</strong> Help us understand how visitors use our site (Google Analytics or similar)</li>
-          <li><strong>Affiliate cookies:</strong> Some affiliate links may set tracking cookies (managed by the affiliate network, not us)</li>
+          <li><strong>Essential cookies:</strong> Required for the website to function properly (e.g., cookie consent preferences stored in localStorage)</li>
         </ul>
-        <p>You can control cookies through your browser settings. Disabling cookies may affect website functionality.</p>
+        <p className="text-sm text-gray-500 mt-2"><em>Note: Analytics cookies and affiliate tracking cookies are not currently active. If enabled in the future, this policy will be updated accordingly. You can control cookies through your browser settings.</em></p>
 
         <h2 className="text-xl font-bold text-gray-900">5. Third-Party Services</h2>
-        <p>We use the following third-party services:</p>
+        <p>We may use the following third-party services (some are not yet active):</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><strong>Analytics:</strong> Google Analytics or Plausible for website traffic analysis</li>
-          <li><strong>Hosting:</strong> Vercel/Netlify for website hosting</li>
-          <li><strong>Forms:</strong> Form service (e.g., Web3Forms, Formspree) for contact form processing</li>
-          <li><strong>Affiliate networks:</strong> Jumia, Konga affiliate programs</li>
+          <li><strong>Contact forms:</strong> Web3Forms for contact form processing (when configured)</li>
+          <li><strong>Affiliate links:</strong> Product links may direct to retailer sites (Jumia, Konga, manufacturer sites). These retailers may set their own cookies/tracking.</li>
         </ul>
-        <p>Each service has its own privacy policy. We encourage you to review them.</p>
+        <p className="text-sm text-gray-500 mt-2"><em>Note: Analytics services (Google Analytics, Plausible) and newsletter services are not currently active. If enabled in the future, this policy will be updated.</em></p>
+        <p>Each third-party service has its own privacy policy. We encourage you to review them.</p>
 
         <h2 className="text-xl font-bold text-gray-900">6. Data Retention</h2>
-        <p>We retain contact form submissions for up to 12 months. Newsletter subscriber data is retained until you unsubscribe. Analytics data is retained according to the analytics provider's policy.</p>
+        <p>When the contact form is configured, submissions are processed by Web3Forms and retained according to their policy. Cookie consent preferences are stored in your browser's localStorage until cleared.</p>
 
         <h2 className="text-xl font-bold text-gray-900">7. Your Rights</h2>
         <p>You have the right to:</p>
