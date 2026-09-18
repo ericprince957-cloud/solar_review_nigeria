@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Clock, TrendingUp, Zap, Battery, Sun, Home as HomeIcon, Plug } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock, TrendingUp, Zap, Battery, Sun, Home as HomeIcon, Plug, Lightbulb } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { products, categories, buyingGuides, blogPosts } from '../data/products';
 import ProductCard from '../components/ProductCard';
@@ -18,6 +18,7 @@ export default function HomePage() {
     'batteries': <Battery className="w-6 h-6" />,
     'panels': <Sun className="w-6 h-6" />,
     'solar-kits': <HomeIcon className="w-6 h-6" />,
+    'solar-lanterns': <Lightbulb className="w-6 h-6" />,
     'charge-controllers': <Plug className="w-6 h-6" />,
   };
 

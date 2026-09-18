@@ -332,6 +332,20 @@ export default function ProductReview() {
                   ))}
                 </div>
 
+                {product.manufacturerUrl && (
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <a
+                      href={product.manufacturerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 text-sm text-trust-600 hover:text-trust-700 font-medium"
+                    >
+                      Visit {product.brand} Official Website
+                      <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+                    </a>
+                  </div>
+                )}
+
                 <p className="text-xs text-gray-500 mt-4 text-center">
                   * We may earn a commission from purchases made through these links.{' '}
                   <Link to="/disclaimer" className="text-solar-600 hover:underline">Learn more</Link>
