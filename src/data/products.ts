@@ -116,9 +116,11 @@ For battery pairing: Luminous recommends a 12V tubular battery of at least 150Ah
       },
     ],
     buyLinks: [
-      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/luminous-eco-watt-1100' },
-      { store: 'Konga', url: 'https://www.konga.com/luminous-eco-watt-inverter' },
+      { store: 'Luminous Nigeria (Official)', url: 'https://www.luminousnigeria.com/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/mlp-luminous-inverter/', isAffiliate: false },
+      { store: 'Luminous India (Global)', url: 'https://www.luminousindia.com/', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://www.luminousnigeria.com/',
     ratingBreakdown: {
       performance: 4.5,
       durability: 4.0,
@@ -203,9 +205,11 @@ Important: Professional installation is strongly recommended. The 24V battery co
       },
     ],
     buyLinks: [
-      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/felicity-solar-2kva-hybrid' },
-      { store: 'Felicity Official Store Lagos', url: 'https://www.felicitysolar.com.ng/2kva-hybrid' },
+      { store: 'Felicity Solar (Official)', url: 'https://www.felicitysolar.com/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/inverters/felicity-solar/', isAffiliate: false },
+      { store: 'Felicity Solar SA', url: 'https://felicitysolar.co.za/', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://www.felicitysolar.com/',
     ratingBreakdown: {
       performance: 4.8,
       durability: 4.5,
@@ -293,9 +297,11 @@ At current pricing, the Exide InvaMaster offers a strong balance of cost and exp
       },
     ],
     buyLinks: [
-      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/exide-invamaster-200ah' },
-      { store: 'Konga', url: 'https://www.konga.com/exide-invamaster-tubular-battery' },
+      { store: 'Exide Industries (Official)', url: 'https://www.exideindustries.com/products/inverter-batteries/tubular-inverter-batteries.aspx', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/mlp-tubular-battery/', isAffiliate: false },
+      { store: 'Exide Care', url: 'https://www.exidecare.com/find-exide/batteries-for-inverter', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://www.exideindustries.com/',
     ratingBreakdown: {
       performance: 4.5,
       durability: 4.8,
@@ -378,9 +384,11 @@ Important: Always buy from authorized dealers. Counterfeit panels are a known pr
       },
     ],
     buyLinks: [
-      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/jinko-solar-450w-panel' },
-      { store: 'SolarHub Nigeria', url: 'https://www.solarhub.ng/jinko-450w' },
+      { store: 'Jinko Solar (Official)', url: 'https://www.jinkosolar.com/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/jinko-450w-solar-panel-mono-2436v48v-419404270.html', isAffiliate: false },
+      { store: 'Jinko Solar US', url: 'https://jinkosolar.us/', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://www.jinkosolar.com/',
     ratingBreakdown: {
       performance: 4.5,
       durability: 4.5,
@@ -465,9 +473,10 @@ We recommend getting quotes from at least 2-3 installers for the mounting struct
       },
     ],
     buyLinks: [
-      { store: 'Felicity Official Store', url: 'https://www.felicitysolar.com.ng/3kva-complete-kit' },
-      { store: 'Solar Nigeria', url: 'https://www.solarnigeria.com/felicity-3kva-kit' },
+      { store: 'Felicity Solar (Official)', url: 'https://www.felicitysolar.com/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/felicity-solar/', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://www.felicitysolar.com/',
     ratingBreakdown: {
       performance: 4.3,
       durability: 4.2,
@@ -549,9 +558,11 @@ Note: This is ONLY a charge controller. You still need a separate inverter to co
       },
     ],
     buyLinks: [
-      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/epsolar-tracer-4210an' },
-      { store: 'Konga', url: 'https://www.konga.com/epsolar-mppt-40a' },
+      { store: 'EPEVER (Official)', url: 'https://www.epever.com/', isAffiliate: false },
+      { store: 'Amazon', url: 'https://www.amazon.com/EPever-Controller-Display-Battery-Charging/dp/B01GMUPGZA', isAffiliate: false },
+      { store: 'Man Solar', url: 'https://mannsolar.com/products/charge-controller-epever-tracer-4210an', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://www.epever.com/',
     ratingBreakdown: {
       performance: 4.3,
       durability: 4.0,
@@ -631,9 +642,10 @@ An important consideration: Rubitek is a newer brand in the Nigerian market comp
       },
     ],
     buyLinks: [
-      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/rubitek-3kva-hybrid-inverter' },
-      { store: 'Solar Nigeria Abuja', url: 'https://www.solarnigeria.com/rubitek-3kva' },
+      { store: 'Rubitec Solar (Official)', url: 'https://www.rubitecsolar.com/', isAffiliate: false },
+      { store: 'Coolamg Business', url: 'https://coolamg.com/product/rubitec-inverter/', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://www.rubitecsolar.com/',
     ratingBreakdown: {
       performance: 4.5,
       durability: 4.3,
@@ -712,8 +724,11 @@ If you're unsure whether this is right for you, please contact us with your spec
       },
     ],
     buyLinks: [
-      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/blue-gate-1kva-inverter' },
+      { store: 'Blue Gate World (Official)', url: 'https://bluegateworld.com/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/bluegate/', isAffiliate: false },
+      { store: 'Bluegate Products', url: 'https://www.bluegateproducts.com/', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://bluegateworld.com/',
     ratingBreakdown: {
       performance: 3.5,
       durability: 3.5,
@@ -805,9 +820,11 @@ The main barrier is upfront cost. At ₦680,000 per unit, it's a significant inv
       },
     ],
     buyLinks: [
-      { store: 'Solar Nigeria', url: 'https://www.solarnigeria.com/pylontech-us3000c' },
-      { store: 'Premium Solar Lagos', url: 'https://www.premiumsolar.ng/pylontech-lithium' },
+      { store: 'Pylontech (Official)', url: 'https://en.pylontech.com.cn/', isAffiliate: false },
+      { store: 'Pylontech US', url: 'https://www.pylontech.us/', isAffiliate: false },
+      { store: 'Voltacon Solar', url: 'https://voltaconsolar.com/products/pylontech-us3000c-3-55kwh-48v-lithium-battery', isAffiliate: false },
     ],
+    manufacturerUrl: 'https://en.pylontech.com.cn/',
     ratingBreakdown: {
       performance: 5.0,
       durability: 5.0,
