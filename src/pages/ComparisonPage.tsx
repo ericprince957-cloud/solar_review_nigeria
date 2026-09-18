@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Plus, X, ArrowLeftRight } from 'lucide-react';
 import { products } from '../data/products';
 import StarRating from '../components/StarRating';
@@ -28,6 +29,11 @@ export default function ComparisonPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Compare Solar Products Side-by-Side — Inverters, Batteries & Panels | SolarNaija</title>
+        <meta name="description" content="Compare solar inverters, batteries, and panels side-by-side. See specs, prices in Naira, ratings, and pros/cons to make the right choice for your Nigerian home." />
+      </Helmet>
+
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">

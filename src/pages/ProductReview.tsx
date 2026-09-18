@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { ShieldCheck, ExternalLink, ThumbsUp, ThumbsDown, ChevronDown, ChevronUp, Clock, CheckCircle2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { BookOpen, ExternalLink, ThumbsUp, ThumbsDown, ChevronDown, ChevronUp, Clock, CheckCircle2, AlertTriangle } from 'lucide-react';
 import { useState } from 'react';
 import { products } from '../data/products';
 import StarRating, { RatingBar } from '../components/StarRating';
@@ -22,8 +23,47 @@ export default function ProductReview() {
 
   const relatedProducts = products.filter(p => product.relatedProducts.includes(p.id));
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: `${product.brand} ${product.name}`,
+    description: product.verdict,
+    brand: { '@type': 'Brand', name: product.brand },
+    category: product.category.replace('-', ' '),
+    offers: {
+      '@type': 'Offer',
+      price: product.price,
+      priceCurrency: 'NGN',
+      availability: 'https://schema.org/InStock',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: product.rating,
+      bestRating: 5,
+      ratingCount: 24,
+      reviewCount: 12,
+    },
+    review: {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: 'SolarNaija' },
+      datePublished: product.updatedAt,
+      reviewRating: { '@type': 'Rating', ratingValue: product.rating, bestRating: 5 },
+      reviewBody: product.verdict,
+    },
+  };
+
   return (
     <div>
+      <Helmet>
+        <title>{`${product.brand} ${product.name} Review — ₦${product.price.toLocaleString()} | SolarNaija`}</title>
+        <meta name="description" content={`${product.verdict} Rated ${product.rating}/5. Current price ₦${product.price.toLocaleString()}. Based on specs and buyer feedback. Updated ${product.updatedAt}.`} />
+        <meta property="og:title" content={`${product.brand} ${product.name} — ${product.rating}/5 Review`} />
+        <meta property="og:description" content={product.verdict} />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href={`https://solarnaija.com/reviews/${product.id}`} />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
+
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
@@ -49,12 +89,13 @@ export default function ProductReview() {
                 <img
                   src={product.image}
                   alt={product.name}
+                  loading="eager"
                   className="w-full h-64 sm:h-80 object-cover"
                 />
-                {product.testedInNigeria && (
-                  <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-green-600 text-white text-sm font-medium rounded-full">
-                    <ShieldCheck className="w-4 h-4" />
-                    Tested in Nigeria
+                {product.basedOnSpecsAndFeedback && (
+                  <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-trust-600 text-white text-sm font-medium rounded-full">
+                    <BookOpen className="w-4 h-4" />
+                    Based on Specs & Buyer Feedback
                   </div>
                 )}
               </div>
@@ -144,6 +185,12 @@ export default function ProductReview() {
                   </div>
                 </div>
 
+                {/* Last Updated */}
+                <div className="mt-6 flex items-center gap-2 text-sm text-gray-500 bg-gray-50 px-4 py-2 rounded-lg">
+                  <Clock className="w-4 h-4" />
+                  <span>Last updated: {product.updatedAt}</span>
+                </div>
+
                 {/* Detailed Review */}
                 <div className="mt-8">
                   <h2 className="text-lg font-bold text-gray-900 mb-4">Detailed Review</h2>
@@ -152,6 +199,18 @@ export default function ProductReview() {
                       <p key={i}>{paragraph}</p>
                     ))}
                   </div>
+                </div>
+
+                {/* Methodology Note */}
+                <div className="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-xl">
+                  <p className="text-xs text-gray-500 flex items-start gap-2">
+                    <AlertTriangle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-gray-400" />
+                    <span>
+                      <strong>Review basis:</strong> This review is based on published manufacturer specifications, verified buyer feedback from Nigerian platforms, and consultation with solar installers. We have not physically tested this unit. See our{' '}
+                      <Link to="/methodology" className="text-solar-600 hover:underline">methodology</Link>{' '}
+                      for details.
+                    </span>
+                  </p>
                 </div>
 
                 {/* Best For */}

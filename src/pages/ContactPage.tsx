@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MessageSquare, Send, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, MessageSquare, Send, CheckCircle, Loader2 } from 'lucide-react';
+
+// Web3Forms access key — replace with your own from https://web3forms.com
+const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,9 +19,46 @@ export default function ContactPage() {
     budget: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError('');
+
+    try {
+      // Submit to Web3Forms (replace with your actual form service)
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: `SolarNaija: ${formData.subject}`,
+          message: `${formData.message}\n\n---\nTopic: ${formData.subject}\nHome Size: ${formData.homeSize || 'Not specified'}\nBudget: ${formData.budget || 'Not specified'}`,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        // If Web3Forms isn't configured, still show success for demo
+        // In production, replace this with proper error handling
+        if (WEB3FORMS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+          setSubmitted(true); // Demo mode
+        } else {
+          setError('Something went wrong. Please try again or email us directly at hello@solarnaija.com');
+        }
+      }
+    } catch {
+      // Network error — still show success in demo mode
+      if (WEB3FORMS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+        setSubmitted(true);
+      } else {
+        setError('Network error. Please try again or email us at hello@solarnaija.com');
+      }
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -35,6 +78,11 @@ export default function ContactPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Contact Us — SolarNaija</title>
+        <meta name="description" content="Ask us about solar inverters, batteries, panels, and complete solar kits for Nigerian homes. Get personalized recommendations." />
+      </Helmet>
+
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <nav className="flex items-center gap-2 text-sm text-gray-500">
@@ -149,12 +197,19 @@ export default function ContactPage() {
                 />
               </div>
 
+              {error && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
+                  {error}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="flex items-center gap-2 px-6 py-3 bg-solar-500 hover:bg-solar-600 text-white font-semibold rounded-lg transition-colors"
+                disabled={submitting}
+                className="flex items-center gap-2 px-6 py-3 bg-solar-500 hover:bg-solar-600 disabled:bg-solar-300 text-white font-semibold rounded-lg transition-colors"
               >
-                <Send className="w-4 h-4" />
-                Send Message
+                {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+                {submitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

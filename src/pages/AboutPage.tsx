@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Users, Eye, Heart } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div>
+      <Helmet>
+        <title>About Us — SolarNaija Reviews</title>
+        <meta name="description" content="Learn about SolarNaija's review methodology, team, and commitment to honest solar equipment reviews for Nigerian homes and businesses." />
+      </Helmet>
+
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <nav className="flex items-center gap-2 text-sm text-gray-500">
@@ -26,10 +32,10 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              We started SolarNaija because too many Nigerians were getting ripped off buying solar equipment — either overpaying for poor-quality products or buying undersized systems that couldn't handle their needs. We believe every Nigerian deserves honest, practical information to make the right solar investment.
+              We started SolarNaija because too many Nigerians struggle to find reliable information about solar equipment. With so many products, brands, and price points — and with prices that fluctuate constantly due to forex rates — buyers need clear, honest guidance to make the right investment.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Our team tests every product in real Nigerian conditions — not in a lab with perfect temperature and clean power. We install them in actual homes and businesses across Lagos, Abuja, and other cities, dealing with the same 35°C+ heat, voltage fluctuations, and dusty environments that you face every day.
+              Our goal is to be the most trusted source of solar equipment information for Nigerian homes and businesses. We synthesize published specifications, verified buyer feedback, and installer expertise to help you make informed decisions.
             </p>
           </section>
 
@@ -40,10 +46,10 @@ export default function AboutPage() {
               Who We Are
             </h2>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              We're a team of solar engineers, electricians, and tech reviewers based in Nigeria. Our lead reviewer has over 8 years of experience installing solar systems across Nigeria, from small POS shop setups to 10KVA home systems. We've seen what works and what doesn't — and we share that knowledge honestly.
+              SolarNaija is run by a small team with backgrounds in solar energy, electrical engineering, and technology research based in Nigeria. We research and analyze solar equipment to help Nigerian buyers navigate a complex and rapidly-changing market.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              We are NOT a solar installation company. We don't sell equipment. This means our reviews are completely independent — we have no incentive to push any particular brand or product.
+              We are NOT a solar installation company. We don't sell equipment. This means our analysis is independent — we have no incentive to push any particular brand or product. Our revenue comes from affiliate commissions and advertising, which is fully disclosed.
             </p>
           </section>
 
@@ -53,26 +59,27 @@ export default function AboutPage() {
               <ShieldCheck className="w-5 h-5 text-solar-500" />
               Our Review Methodology
             </h2>
+            <p className="text-gray-600 text-sm mt-2 italic">Full details available on our <Link to="/methodology" className="text-solar-600 hover:underline">Methodology page</Link>.</p>
             <div className="mt-4 space-y-3">
               <div className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-solar-100 text-solar-700 rounded-full flex items-center justify-center text-xs font-bold shrink-0">1</span>
-                <p className="text-gray-700"><strong>Purchase or borrow:</strong> We buy products with our own money or borrow from manufacturers (disclosed). We never review products we haven't physically handled.</p>
+                <p className="text-gray-700"><strong>Specification analysis:</strong> We study published manufacturer specifications, user manuals, and technical documentation for every product we review.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-solar-100 text-solar-700 rounded-full flex items-center justify-center text-xs font-bold shrink-0">2</span>
-                <p className="text-gray-700"><strong>Real-world testing:</strong> Each product is installed and used for at least 4 weeks in Nigerian conditions. We measure actual performance, not just specs.</p>
+                <p className="text-gray-700"><strong>Buyer feedback synthesis:</strong> We analyze verified reviews and ratings from Nigerian e-commerce platforms (Jumia, Konga) and solar community forums.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-solar-100 text-solar-700 rounded-full flex items-center justify-center text-xs font-bold shrink-0">3</span>
-                <p className="text-gray-700"><strong>Heat & stress testing:</strong> We specifically test how products handle Nigerian heat (35-45°C), voltage fluctuations, and dusty conditions.</p>
+                <p className="text-gray-700"><strong>Installer consultation:</strong> We consult with qualified solar installers operating in Nigeria for practical insights on product performance and reliability.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-solar-100 text-solar-700 rounded-full flex items-center justify-center text-xs font-bold shrink-0">4</span>
-                <p className="text-gray-700"><strong>User feedback:</strong> We collect feedback from real Nigerian users who've been running the equipment for months or years.</p>
+                <p className="text-gray-700"><strong>Nigerian context:</strong> We evaluate products specifically for Nigerian conditions — voltage fluctuations, high temperatures, dusty environments, and typical load profiles.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-6 h-6 bg-solar-100 text-solar-700 rounded-full flex items-center justify-center text-xs font-bold shrink-0">5</span>
-                <p className="text-gray-700"><strong>Regular updates:</strong> We update reviews monthly with current prices and availability. If a product's quality changes, we update our rating.</p>
+                <p className="text-gray-700"><strong>Regular updates:</strong> We update reviews with current prices and availability. If new information becomes available, we update our analysis.</p>
               </div>
             </div>
           </section>
