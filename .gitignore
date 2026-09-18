@@ -1,5 +1,262 @@
+# Dependencies
 node_modules/
-.next/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*.lcov
+
+# Production
 dist/
 build/
+.vite/
+
+# Environment variables (NEVER commit secrets)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Supabase (if using local development)
+.supabase/
+
+# Misc
+.vercel
+.netlify
+
+# Generated files (if any)
+public/uploads/
+public/temp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn
+.yarn-integrity
+.yarn/unplugged
+.yarn/cache
+.yarn/build-state.yml
+.pnp.*
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Cloudflare
+.wrangler
+
+# Railway
+.railway
+
+# Render
+.render
+
+# Fly.io
+.fly
+
+# Heroku
+.procfile
+
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+
+# Firebase
+.firebase/
+firebase.json
+firestore.rules
+firestore.indexes.json
+
+# Docker (if containerizing)
+docker-compose.override.yml
+
+# Kubernetes
+*.yaml
+!k8s/*.yaml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# Secrets (never commit)
+secrets/
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.keystore
+
+# Database dumps
+*.sql
+*.dump
+*.sqlite
+*.db
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Images (source files, keep optimized versions)
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
+
+# Videos
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Audio
+*.mp3
+*.wav
+*.ogg
+
+# Documents (keep in docs/ folder instead)
+*.doc
+*.docx
+*.pdf
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+# Exclude large data files
+data/
+datasets/
+*.csv
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!*.config.json
+
+# Exclude generated images (keep in public/images/)
+# But keep the directory structure
+public/images/generated/
+
+# Exclude node modules in subdirectories
+**/node_modules/
+
+# Exclude build artifacts in subdirectories
+**/dist/
+**/build/
+
+# Exclude environment files in subdirectories
+**/.env
+**/.env.*
+!**/.env.example
+
+# Exclude logs in subdirectories
+**/*.log
+
+# Exclude cache in subdirectories
+**/.cache/
+**/cache/
+
+# Exclude temporary directories
+**/tmp/
+**/temp/
+
+# Exclude OS-specific files in subdirectories
+**/Thumbs.db
+**/.DS_Store
+
+# Exclude editor files in subdirectories
+**/.vscode/
+**/.idea/
+**/*.swp
+**/*.swo
+
+# Exclude backup files in subdirectories
+**/*.bak
+**/*.backup
+**/*.old
+**/*~
+
+# Exclude minified files (regenerate from source)
+**/*.min.js
+**/*.min.css
+
+# Exclude source maps in production
+**/*.map
+
+# Exclude test coverage reports
+**/coverage/
+
+# Exclude documentation build
+**/docs/_build/
+**/docs/.docusaurus/
+
+# Exclude storybook build
+**/storybook-static/
+
+# Exclude Cypress videos/screenshots
+**/cypress/videos/
+**/cypress/screenshots/
+
+# Exclude Playwright reports
+**/playwright-report/
+**/test-results/
+.next/
 *.log
