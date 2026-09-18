@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   brand: string;
-  category: 'inverters' | 'batteries' | 'panels' | 'solar-kits' | 'charge-controllers';
+  category: 'inverters' | 'batteries' | 'panels' | 'solar-kits' | 'solar-lanterns' | 'charge-controllers';
   image: string;
   imageAlt?: string; // Custom alt text for the product image
   rating: number; // Editorial/spec-based rating (0-5)
@@ -836,6 +836,452 @@ The main barrier is upfront cost. At ₦680,000 per unit, it's a significant inv
     updatedAt: 'June 2026',
     basedOnSpecsAndFeedback: true,
   },
+  {
+    id: 'sun-king-pico-plus',
+    name: 'Pico Plus Solar Lantern',
+    brand: 'Sun King',
+    category: 'solar-lanterns',
+    image: 'https://ng.sunking.com/wp-content/uploads/2024/01/pico-plus.png',
+    rating: 4.3,
+    price: 10000,
+    priceNote: 'Prices may vary by retailer. Last verified June 2026.',
+    verdict: 'Ultra-portable and budget-friendly solar lantern perfect for basic lighting needs. Ideal replacement for kerosene lamps with 5x brighter output and 72-hour runtime.',
+    specs: {
+      'Brightness': '50 lumens (max)',
+      'Light Modes': '3 brightness levels',
+      'Solar Panel': '350mW integrated polycrystalline',
+      'Battery': '425 mAh LiFePO4 (3.3V)',
+      'Runtime': 'Up to 72 hours',
+      'Battery Life': '5 years',
+      'Warranty': '2 years',
+      'Weight': 'Ultra-portable',
+      'Charging Time': '6-8 hours (full sun)',
+      'Comparison': '5x brighter than kerosene lamp',
+    },
+    pros: [
+      'Extremely affordable entry point for solar lighting',
+      '72-hour runtime on single charge',
+      '5-year battery lifespan with LiFePO4 chemistry',
+      'Integrated solar panel - no external wiring needed',
+      'Ultra-portable with multi-use stand',
+      '3 brightness modes for flexibility',
+      'Zero running costs after purchase',
+    ],
+    cons: [
+      'Only 50 lumens - suitable for small areas only',
+      'No USB charging port for phones',
+      'Not suitable as primary lighting for large rooms',
+      'Small battery capacity limits extended use',
+    ],
+    reviewBody: `The Sun King Pico Plus is designed as an entry-level solar lantern for basic lighting needs in Nigerian homes. Based on manufacturer specifications and user feedback, it delivers 50 lumens of brightness on max setting - approximately 5 times brighter than a traditional kerosene lamp.
+
+The integrated 350mW polycrystalline solar panel charges the 425 mAh LiFePO4 battery, which is rated for 5 years of typical use. LiFePO4 chemistry is significant because it offers superior safety and longevity compared to older lithium-ion technologies.
+
+With three brightness modes, users can balance light output against battery life. The maximum 72-hour runtime is achieved on the lowest setting, making it practical for overnight use during power outages.
+
+The multi-use stand allows the lantern to function as a desk lamp, hanging light, or handheld torch. This versatility makes it suitable for various scenarios: reading, cooking areas, outdoor activities, or emergency lighting.
+
+At approximately ₦8,000-₦10,000, the Pico Plus represents an accessible entry point for households transitioning from kerosene lamps to solar lighting. The zero running costs (no fuel, no electricity bills) make it economically attractive over time.
+
+However, users should understand this is basic lighting - it won't illuminate an entire room or power devices. For multi-room lighting or phone charging, consider the Sun King Home 40 Plus or Pro 400 models.`,
+    bestFor: [
+      'Households transitioning from kerosene lamps',
+      'Small rooms or personal lighting needs',
+      'Students needing study light during outages',
+      'Outdoor activities and camping',
+      'Emergency backup lighting',
+      'POS agents and small shop operators',
+    ],
+    faqs: [
+      {
+        question: 'How long does the battery last before needing replacement?',
+        answer: 'The LiFePO4 battery is rated for 5 years of typical daily use. After this period, capacity will gradually decline but the lantern will still function at reduced runtime.',
+      },
+      {
+        question: 'Can I charge my phone with this lantern?',
+        answer: 'No, the Pico Plus does not have a USB charging port. For phone charging capability, consider the Sun King Pro 400 or Home 40 Plus models.',
+      },
+      {
+        question: 'How long does it take to fully charge?',
+        answer: 'Approximately 6-8 hours in direct sunlight. Cloudy conditions will extend charging time. The integrated solar panel is optimized for Nigerian sun conditions.',
+      },
+    ],
+    buyLinks: [
+      { store: 'Sun King Nigeria (Official)', url: 'https://ng.sunking.com/product/pico-plus/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/mlp-sun-king-pico-plus/', isAffiliate: false },
+      { store: 'Thrillhouse Nigeria', url: 'https://www.thrillhouse.com.ng/shop/alternative-energy/sun-king-solar-gadgets/sun-king-pico-plus/', isAffiliate: false },
+    ],
+    manufacturerUrl: 'https://ng.sunking.com/',
+    ratingBreakdown: {
+      performance: 4.0,
+      durability: 4.5,
+      valueForMoney: 4.8,
+      easeOfInstallation: 5.0,
+      batteryLife: 4.5,
+    },
+    relatedProducts: ['sun-king-pro-400', 'sun-king-home-40-plus'],
+    updatedAt: 'June 2026',
+    basedOnSpecsAndFeedback: true,
+  },
+  {
+    id: 'sun-king-pro-400',
+    name: 'Pro 400 Solar Lantern',
+    brand: 'Sun King',
+    category: 'solar-lanterns',
+    image: 'https://ng.sunking.com/wp-content/uploads/2024/01/pro-400.png',
+    rating: 4.6,
+    price: 37255,
+    priceNote: 'Prices may vary by retailer. Last verified June 2026.',
+    verdict: 'Super bright emergency solar lantern with USB phone charging. Delivers 400 lumens (40x brighter than kerosene) with 100-hour runtime and robust battery life.',
+    specs: {
+      'Brightness': '400 lumens (max)',
+      'Light Modes': '3 brightness levels',
+      'Solar Panel': '5.5W with 5-meter cable',
+      'Battery': '5100 mAh LiFePO4',
+      'Runtime': 'Up to 100 hours (low mode)',
+      'Battery Life': '5 years',
+      'Warranty': '2 years',
+      'USB Output': 'Mobile phone charging',
+      'Dimensions': 'Lamp: 130x145x74mm',
+      'Comparison': '40x brighter than kerosene lamp',
+    },
+    pros: [
+      '400 lumens provides substantial room lighting',
+      'Built-in USB port for phone charging',
+      '100-hour runtime on low power mode',
+      'Separate 5.5W solar panel with long cable',
+      '5-year battery lifespan with LiFePO4',
+      'Suitable for home, office, and outdoor use',
+      'Battery meter shows remaining charge',
+    ],
+    cons: [
+      'Higher price point than basic lanterns',
+      'Larger and heavier than Pico Plus',
+      'Solar panel requires separate placement',
+      'USB charging reduces available lighting runtime',
+    ],
+    reviewBody: `The Sun King Pro 400 is positioned as a premium solar lantern for Nigerian households and small businesses needing both bright lighting and phone charging capability. With 400 lumens maximum output, it delivers 40 times the brightness of a kerosene lamp according to manufacturer specifications.
+
+The 5.5W solar panel connects via a 5-meter cable, allowing flexible placement for optimal sun exposure while the lantern remains indoors. This separate panel design is more effective than integrated panels for consistent charging.
+
+The 5100 mAh LiFePO4 battery provides up to 100 hours of runtime on the lowest brightness setting. Three lighting modes allow users to balance brightness against battery life: high (200 lumens, 12 hours), normal (lower output, extended runtime), and low power (25 lumens, 100 hours).
+
+The built-in USB charging port is a significant advantage for Nigerian users who need to keep phones charged during power outages. However, using USB charging will reduce available lighting runtime, so users must balance these needs.
+
+At approximately ₦27,000-₦37,000, the Pro 400 represents a mid-range investment. It's suitable for shops, POS agents, small offices, or households needing both lighting and phone charging. The 5-year battery lifespan and 2-year warranty provide confidence in long-term value.
+
+User feedback indicates reliable performance in Nigerian conditions, with the LiFePO4 battery maintaining capacity over extended use. The separate solar panel design allows optimal positioning even in spaces with limited roof access.`,
+    bestFor: [
+      'Small shops and POS businesses',
+      'Households needing both lighting and phone charging',
+      'Students requiring bright study light',
+      'Security lighting for compounds',
+      'Outdoor events and gatherings',
+      'Small offices during power outages',
+    ],
+    faqs: [
+      {
+        question: 'Can I charge my phone while using the light?',
+        answer: 'Yes, but using the USB charging port will reduce available battery for lighting. The Pro 400 is designed to handle both simultaneously, though runtime will be shorter than lighting-only use.',
+      },
+      {
+        question: 'How bright is 400 lumens in practical terms?',
+        answer: '400 lumens is sufficient to illuminate a medium-sized room (roughly 3m x 3m) for reading, cooking, or working. It\'s comparable to a 40W incandescent bulb.',
+      },
+      {
+        question: 'How long does the solar panel take to charge the battery?',
+        answer: 'Approximately 8-10 hours in direct sunlight for a full charge. The 5-meter cable allows placing the panel in optimal sun location while keeping the lantern indoors.',
+      },
+    ],
+    buyLinks: [
+      { store: 'Sun King Nigeria (Official)', url: 'https://ng.sunking.com/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/sun-king-pro-400-super-bright-emergency-solar-lamp-portable-solar-light-for-home-office-and-outdoor-travelling-use-60660863.html', isAffiliate: false },
+    ],
+    manufacturerUrl: 'https://ng.sunking.com/',
+    ratingBreakdown: {
+      performance: 4.7,
+      durability: 4.5,
+      valueForMoney: 4.5,
+      easeOfInstallation: 4.8,
+      batteryLife: 4.7,
+    },
+    relatedProducts: ['sun-king-pico-plus', 'sun-king-home-40-plus'],
+    updatedAt: 'June 2026',
+    basedOnSpecsAndFeedback: true,
+  },
+  {
+    id: 'sun-king-home-40-plus',
+    name: 'Home 40 Plus Solar Home System',
+    brand: 'Sun King',
+    category: 'solar-kits',
+    image: 'https://ng.sunking.com/wp-content/uploads/2024/01/home-40-plus.png',
+    rating: 4.4,
+    price: 59040,
+    priceNote: 'Prices may vary by retailer. Last verified June 2026.',
+    verdict: 'Multi-room solar lighting kit with two bright tube lights, wall switches, and phone charging. Delivers 400 lumens total output with 30-hour runtime.',
+    specs: {
+      'Light Output': '400 lumens total (2 x 200 lumens)',
+      'Tube Lights': '2 LED tube lights with wall switches',
+      'Solar Panel': '5.5W',
+      'Battery': '2550 mAh Li-ion NMC (7.4V)',
+      'Runtime': 'Up to 30 hours (low power mode)',
+      'Warranty': '2 years',
+      'USB Output': 'Mobile phone charging',
+      'Charging Time': '5 hours (full sun)',
+      'Control': 'Individual wall switches for each light',
+      'Brightness': '20x brighter than kerosene lamp per tube',
+    },
+    pros: [
+      'Two separate tube lights for multi-room lighting',
+      'Individual wall switches for each light',
+      '400 lumens total output covers multiple spaces',
+      'USB charging for mobile phones',
+      '30-hour runtime on low power mode',
+      'Easy installation with included mounting hardware',
+      'Suitable for 1-2 bedroom apartments',
+    ],
+    cons: [
+      'May be discontinued - check availability',
+      'Li-ion NMC battery has shorter lifespan than LiFePO4',
+      'Not suitable for powering appliances (TV, fans)',
+      'Limited to lighting and phone charging only',
+      'Smaller battery capacity than newer models',
+    ],
+    reviewBody: `The Sun King Home 40 Plus is a solar home lighting system designed for Nigerian households needing multi-room illumination. Based on manufacturer specifications, it includes two LED tube lights, each producing 200 lumens (400 lumens total), with individual wall switches for independent control.
+
+The 5.5W solar panel charges a 2550 mAh Li-ion NMC battery rated at 7.4V. This battery chemistry is different from the LiFePO4 used in newer Sun King models - while still reliable, NMC batteries typically have shorter lifespans (3-4 years vs 5-10 years for LiFePO4).
+
+Runtime reaches up to 30 hours on the lowest power setting, making it practical for overnight use during extended power outages. The system includes USB charging capability for mobile phones, though this will reduce available lighting runtime.
+
+Individual wall switches allow users to control each tube light independently, enabling lighting in different rooms without wasting energy in unoccupied spaces. This is particularly useful for 1-2 bedroom apartments or small shops.
+
+At approximately ₦59,000, the Home 40 Plus represents a mid-range investment for households needing more than single-point lighting. However, availability may be limited as Sun King has introduced newer models (HomePlus, HomePlus Max) with improved specifications.
+
+Important note: This system is designed for lighting and phone charging only. It cannot power appliances like TVs, fans, or refrigerators. For appliance support, consider the Sun King PowerPlay Pro or traditional inverter systems.`,
+    bestFor: [
+      '1-2 bedroom apartments needing multi-room lighting',
+      'Small shops requiring lighting in different areas',
+      'Households replacing multiple kerosene lamps',
+      'Users needing both lighting and phone charging',
+      'Rural homes without grid electricity access',
+    ],
+    faqs: [
+      {
+        question: 'Can this system power a TV or fan?',
+        answer: 'No, the Home 40 Plus is designed for LED lighting and phone charging only. It does not have AC output for appliances. For TV/fan support, consider the PowerPlay Pro or traditional inverter systems.',
+      },
+      {
+        question: 'Is this product still available?',
+        answer: 'Availability may be limited as Sun King has introduced newer models. Check with Sun King Nigeria (ng.sunking.com) or authorized retailers for current stock. Newer models like HomePlus Max offer improved specifications.',
+      },
+      {
+        question: 'How long does the battery last before replacement?',
+        answer: 'The Li-ion NMC battery is rated for approximately 3-4 years of typical daily use. After this period, capacity will gradually decline. Newer Sun King models use LiFePO4 batteries with 5-10 year lifespans.',
+      },
+    ],
+    buyLinks: [
+      { store: 'Sun King Nigeria (Official)', url: 'https://ng.sunking.com/', isAffiliate: false },
+      { store: 'Konga', url: 'https://www.konga.com/product/sun-king-homplus-pro-solar-home-light-system-6729344', isAffiliate: false },
+    ],
+    manufacturerUrl: 'https://ng.sunking.com/',
+    ratingBreakdown: {
+      performance: 4.3,
+      durability: 4.2,
+      valueForMoney: 4.5,
+      easeOfInstallation: 4.7,
+      batteryLife: 4.0,
+    },
+    relatedProducts: ['sun-king-homeplus-max', 'sun-king-pro-400'],
+    updatedAt: 'June 2026',
+    basedOnSpecsAndFeedback: true,
+  },
+  {
+    id: 'sun-king-homeplus-max',
+    name: 'HomePlus Max Solar Home System',
+    brand: 'Sun King',
+    category: 'solar-kits',
+    image: 'https://ng.sunking.com/wp-content/uploads/2024/01/homeplus-max.png',
+    rating: 4.7,
+    price: 185000,
+    priceNote: 'Prices may vary by retailer. Last verified June 2026.',
+    verdict: 'Powerful rooftop solar system with 4 bright tube lights, security lamp, and USB-C charging. Features 192Wh LFP battery with 10-year lifespan and 80W solar panel.',
+    specs: {
+      'Light Output': '2,500 lumens maximum',
+      'Tube Lights': '4 x 600 lumens LED with wall switches',
+      'Security Lamp': '100 lumens motion-sensing',
+      'Solar Panel': '80W',
+      'Battery': '192Wh LiFePO4 (3.2V)',
+      'Battery Lifespan': '10 years (2,500+ cycles)',
+      'Runtime': 'Up to 17 hours',
+      'Warranty': '2 years',
+      'USB Output': 'USB-A and USB-C (65W)',
+      'Charging': 'Solar and USB-C grid charging',
+      'TV Support': 'Compatible with select digital HD LED TVs',
+    },
+    pros: [
+      '2,500 lumens total output illuminates entire homes',
+      '4 tube lights with individual wall switches',
+      'Motion-sensing security lamp included',
+      '192Wh LiFePO4 battery with 10-year lifespan',
+      '80W solar panel for fast charging',
+      'USB-C 65W output charges laptops and phones',
+      'Dual charging: solar and grid via USB-C',
+      'Compatible with select HD LED TVs',
+      'Suitable for 2-3 bedroom homes',
+    ],
+    cons: [
+      'Higher upfront cost (₦185,000+)',
+      'TV compatibility limited to specific models',
+      'Cannot power high-wattage appliances (fridge, AC)',
+      'Requires proper installation for optimal performance',
+      'Security lamp requires separate mounting',
+    ],
+    reviewBody: `The Sun King HomePlus Max is Sun King's most powerful solar home system for Nigerian households, designed to replace generator dependency for lighting and basic entertainment. Based on manufacturer specifications, it delivers 2,500 lumens maximum brightness through four 600-lumen LED tube lights, each with individual wall switches.
+
+The system includes a motion-sensing 100-lumen security lamp, providing automatic outdoor lighting for compounds and entrances. This is a significant advantage for security-conscious households.
+
+The 192Wh LiFePO4 battery represents a major upgrade from older models. LiFePO4 chemistry offers 10-year lifespan with 2,500+ charge cycles, significantly outperforming the Li-ion NMC batteries in earlier Sun King products. This translates to lower long-term costs despite higher upfront investment.
+
+The 80W solar panel provides substantial charging capacity, enabling full battery recharge even on partly cloudy Nigerian days. Dual charging capability (solar and USB-C grid charging) ensures reliability during extended rainy seasons.
+
+USB-C 65W output is a standout feature, allowing charging of laptops and smartphones at high speed. This makes the system practical for remote workers and students who need both lighting and device charging.
+
+At approximately ₦185,000, the HomePlus Max represents a significant investment but offers substantial value for 2-3 bedroom homes. It can power compatible digital HD LED TVs (check Sun King's compatibility list), providing entertainment during outages.
+
+However, users should understand this system cannot power high-wattage appliances like refrigerators, air conditioners, or water heaters. For those needs, consider traditional inverter systems or the Sun King PowerPlay Pro.
+
+The system is available through Sun King Nigeria's EasyBuy installment plan (approximately ₦4,500/week), making it accessible to households unable to pay upfront.`,
+    bestFor: [
+      '2-3 bedroom homes needing comprehensive lighting',
+      'Households wanting TV entertainment during outages',
+      'Remote workers needing laptop charging',
+      'Homes requiring security lighting',
+      'Users transitioning from generators to solar',
+      'Families needing multi-room lighting solution',
+    ],
+    faqs: [
+      {
+        question: 'Which TVs are compatible with this system?',
+        answer: 'The HomePlus Max supports select digital HD LED TVs (typically 24-32 inch, low-wattage models). Check Sun King Nigeria\'s compatibility list before purchase. It cannot power large TVs or high-wattage models.',
+      },
+      {
+        question: 'Can this system power a refrigerator or fan?',
+        answer: 'No, the HomePlus Max is designed for LED lighting, TV (compatible models), and device charging. It cannot power refrigerators, fans, or other high-wattage appliances. For those needs, consider traditional inverter systems.',
+      },
+      {
+        question: 'How does the EasyBuy payment plan work?',
+        answer: 'Sun King Nigeria offers installment payments of approximately ₦4,500/week. Contact Sun King Nigeria (carenigeria@sunking.com or +234 800 786 54 64) for current payment options and eligibility requirements.',
+      },
+    ],
+    buyLinks: [
+      { store: 'Sun King Nigeria (Official)', url: 'https://ng.sunking.com/product/homeplus-max-2/', isAffiliate: false },
+      { store: 'Jiji Nigeria', url: 'https://jiji.ng/isolo/home-appliances/sunking-home-plus-max-stand-alone-q4qYaiM5XVaZzPG8UKQ4Kkeh.html', isAffiliate: false },
+    ],
+    manufacturerUrl: 'https://ng.sunking.com/',
+    ratingBreakdown: {
+      performance: 4.8,
+      durability: 4.8,
+      valueForMoney: 4.5,
+      easeOfInstallation: 4.3,
+      batteryLife: 5.0,
+    },
+    relatedProducts: ['sun-king-home-40-plus', 'sun-king-powerplay-pro'],
+    updatedAt: 'June 2026',
+    basedOnSpecsAndFeedback: true,
+  },
+  {
+    id: 'sun-king-powerplay-pro',
+    name: 'PowerPlay Pro Solar Inverter System',
+    brand: 'Sun King',
+    category: 'inverters',
+    image: 'https://ng.sunking.com/wp-content/uploads/2024/01/powerplay-pro.png',
+    rating: 4.5,
+    price: 350000,
+    priceNote: 'Prices may vary by retailer and payment plan. Last verified June 2026.',
+    verdict: 'Complete AC solar and energy storage system for households and small businesses. 600W inverter with 800Wh LFP battery, 450W solar panel, and UPS functionality during blackouts.',
+    specs: {
+      'Inverter Capacity': '600W pure sine wave',
+      'Battery': '800Wh LiFePO4',
+      'Battery Lifespan': '10 years (2,500+ cycles)',
+      'Solar Panel': '450W',
+      'AC Output': '230V for standard appliances',
+      'USB Output': 'USB-A and USB-C ports',
+      'UPS Function': 'Uninterruptible power supply during blackouts',
+      'Warranty': '2 years',
+      'Dimensions': '440 x 230 x 455 mm',
+      'Weight': '11.75 kg',
+      'Appliance Support': 'TV, computers, fans, power tools',
+    },
+    pros: [
+      '600W AC output powers standard appliances',
+      '800Wh LiFePO4 battery with 10-year lifespan',
+      '450W solar panel for substantial energy generation',
+      'UPS functionality prevents device shutdown during outages',
+      'Pure sine wave output safe for sensitive electronics',
+      'USB-A and USB-C ports for device charging',
+      'Suitable for small businesses and home offices',
+      'Complete system with panel, battery, and inverter',
+    ],
+    cons: [
+      'Higher upfront cost (₦350,000+)',
+      '600W limits simultaneous appliance use',
+      'Cannot power high-wattage appliances (AC, large fridge)',
+      'Requires professional installation',
+      'Heavy system requiring proper mounting',
+    ],
+    reviewBody: `The Sun King PowerPlay Pro is a complete AC solar inverter system designed for Nigerian households and small businesses needing to power standard appliances during power outages. Based on manufacturer specifications, it features a 600W pure sine wave inverter, 800Wh LiFePO4 battery, and 450W solar panel.
+
+The 600W pure sine wave output is critical for Nigerian users because it safely powers sensitive electronics like TVs, computers, and routers without damage. Pure sine wave output matches grid electricity quality, unlike cheaper modified sine wave inverters.
+
+The 800Wh LiFePO4 battery represents significant storage capacity. LiFePO4 chemistry offers 10-year lifespan with 2,500+ charge cycles, providing long-term reliability. This battery can power a 32" TV (60W) for approximately 13 hours, or a laptop (65W) for 12 hours, on a single charge.
+
+The 450W solar panel provides substantial daily energy generation, typically 1.8-2.2 kWh in Nigerian conditions. This allows the system to recharge the battery daily while powering daytime loads.
+
+UPS (Uninterruptible Power Supply) functionality is a standout feature. When grid power fails, the PowerPlay Pro switches to battery power within milliseconds, preventing computer shutdowns, TV interruptions, or router reboots. This is invaluable for remote workers and businesses.
+
+At approximately ₦350,000, the PowerPlay Pro represents a significant investment but offers comprehensive backup power for small homes or businesses. It can simultaneously power a TV, computer, router, and several LED lights, though users must manage total load to stay within the 600W limit.
+
+The system cannot power high-wattage appliances like refrigerators (150-400W running, 1000W+ startup), air conditioners, or water heaters. For those needs, users require larger inverter systems (2KVA+).
+
+Sun King Nigeria offers EasyBuy installment plans (approximately ₦18,000/week for 80 weeks), making the system accessible to households unable to pay upfront. Professional installation is recommended for safety and optimal performance.`,
+    bestFor: [
+      'Home offices needing computer and router backup',
+      'Small businesses powering POS, lights, and fans',
+      'Households wanting TV and entertainment during outages',
+      'Remote workers requiring uninterrupted power',
+      'Small shops needing reliable backup power',
+      'Users transitioning from generators to solar',
+    ],
+    faqs: [
+      {
+        question: 'Can this system power a refrigerator?',
+        answer: 'No, the PowerPlay Pro\'s 600W output is insufficient for refrigerators. Refrigerators require 150-400W running power but 1000W+ startup surge. For refrigerator support, you need a 2KVA+ inverter system.',
+      },
+      {
+        question: 'How long does the battery last during outages?',
+        answer: 'The 800Wh battery can power a 32" TV (60W) for ~13 hours, a laptop (65W) for ~12 hours, or LED lights (40W total) for ~20 hours. Actual runtime depends on total load and battery age.',
+      },
+      {
+        question: 'Do I need a separate charge controller?',
+        answer: 'No, the PowerPlay Pro includes built-in charge control. The system manages solar panel charging automatically. Professional installation is recommended to ensure proper setup.',
+      },
+    ],
+    buyLinks: [
+      { store: 'Sun King Nigeria (Official)', url: 'https://ng.sunking.com/product/powerplay-pro/', isAffiliate: false },
+      { store: 'Jumia Nigeria', url: 'https://www.jumia.com.ng/sun-king-powerplay-pro-800wh-lfp-battery-hybrid-solar-inverter-power-station-backup-power-for-tv-fridge-laptops-2-years-warranty-415674144.html', isAffiliate: false },
+    ],
+    manufacturerUrl: 'https://ng.sunking.com/',
+    ratingBreakdown: {
+      performance: 4.6,
+      durability: 4.7,
+      valueForMoney: 4.3,
+      easeOfInstallation: 4.0,
+      batteryLife: 4.8,
+    },
+    relatedProducts: ['sun-king-homeplus-max', 'felicity-solar-2kva'],
+    updatedAt: 'June 2026',
+    basedOnSpecsAndFeedback: true,
+  },
 ];
 
 export const categories = [
@@ -844,7 +1290,7 @@ export const categories = [
     name: 'Solar Inverters',
     description: 'Pure sine wave and hybrid inverters for Nigerian homes',
     icon: 'inverters',
-    productCount: 4,
+    productCount: 5,
   },
   {
     id: 'batteries',
@@ -865,7 +1311,14 @@ export const categories = [
     name: 'Complete Solar Kits',
     description: 'All-in-one solar packages for homes and businesses',
     icon: 'solar-kits',
-    productCount: 1,
+    productCount: 3,
+  },
+  {
+    id: 'solar-lanterns',
+    name: 'Solar Lanterns',
+    description: 'Portable solar lanterns and emergency lighting',
+    icon: 'solar-lanterns',
+    productCount: 2,
   },
   {
     id: 'charge-controllers',
@@ -885,6 +1338,7 @@ export const brands = [
   { id: 'blue-gate', name: 'Blue Gate', description: 'Budget brand offering affordable modified sine wave inverters for basic power needs. Entry-level only.', productCount: 1 },
   { id: 'epsolar', name: 'Epsolar', description: 'Specialist in charge controllers. Popular MPPT options widely available in Nigerian solar markets.', productCount: 1 },
   { id: 'pylontech', name: 'Pylontech', description: 'Premium lithium battery manufacturer. LiFePO4 batteries with 10-year warranty and 6000+ cycle life.', productCount: 1 },
+  { id: 'sun-king', name: 'Sun King', description: 'Global leader in off-grid solar solutions with strong Nigerian presence. Offers solar lanterns, home systems, and inverter systems with EasyBuy installment plans.', productCount: 5 },
 ];
 
 export const buyingGuides = [
