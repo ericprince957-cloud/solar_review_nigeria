@@ -1,109 +1,151 @@
-# SolarNaija — Solar Equipment Reviews for Nigerian Homes
+# SolarNaija - Solar Equipment Reviews for Nigerian Homes
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-18.2-61dafb.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6.svg)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.4-646cff.svg)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1-38bdf8.svg)](https://tailwindcss.com/)
+A comprehensive review platform for solar equipment in Nigeria, helping consumers make informed decisions about inverters, batteries, panels, solar kits, lanterns, and charge controllers.
 
-> Honest solar equipment reviews for Nigerian homes and businesses. Helping Nigerians beat NEPA wahala by choosing the right solar setup.
+## 🌟 Overview
 
-## 📖 About
+SolarNaija provides honest, research-based reviews of solar equipment available in the Nigerian market. All reviews are based on manufacturer specifications and verified buyer feedback, with clear disclosure of our methodology.
 
-**SolarNaija** is an authority website that reviews, compares, and recommends solar power equipment (inverters, batteries, panels, charge controllers, complete solar kits) specifically for the Nigerian market. It helps Nigerian homeowners, small business owners, landlords, and middle-class buyers deal with unreliable grid electricity by choosing the right solar setup.
+**Live Site**: [https://solar-review-nigeria.vercel.app](https://solar-review-nigeria.vercel.app)
 
-### 🎯 Target Audience
-- Nigerian homeowners tired of fuel generators and rising petrol/diesel costs
-- Small business owners (shop owners, salon owners, POS agents, welders) who need backup power
-- Landlords installing solar for rental properties
-- Middle-class Nigerians researching before a big purchase
+## 📦 Products Reviewed (14 Total)
 
-## ✨ Features
+### Solar Inverters (5)
+- **Luminous Eco Watt 1100** - Budget pure sine wave inverter (₦185,000)
+- **Felicity Solar 2KVA Hybrid** - Top-rated hybrid with MPPT (₦320,000)
+- **Rubitek 3KVA Hybrid** - High-capacity hybrid system (₦420,000)
+- **Blue Gate 1KVA** - Entry-level modified sine wave (₦95,000)
+- **Sun King PowerPlay Pro** - Complete AC solar system with UPS (₦350,000)
 
-### Core Pages
-- **Home** — Hero section, top-rated products, latest reviews, quick category links, price guide table
-- **Category Pages** — 5 categories with filters (price range in Naira, sort by rating/price/name)
-- **Product Reviews** — 9 detailed reviews following a consistent template with specs, pros/cons, FAQs
-- **Comparison Tool** — Side-by-side comparison of 2-3 products
-- **Buying Guides** — 5 detailed guides for Nigerian-specific use cases
-- **Blog/News** — Market updates, price changes, product launches
-- **Brand Pages** — 8 brand profiles with product listings
-- **About** — Mission, methodology, affiliate disclosure
-- **Contact** — Working form with Web3Forms integration
-- **Legal Pages** — Privacy Policy, Terms of Service, Affiliate Disclaimer, Methodology
+### Solar Batteries (2)
+- **Exide InvaMaster 200Ah** - Tubular lead-acid battery (₦210,000)
+- **Pylontech US3000C** - Premium LiFePO4 lithium battery (₦680,000)
 
-### Technical Features
-- 🔍 **Search with autocomplete** — Find products instantly
-- ⚖️ **Product comparison** — Compare up to 3 products side-by-side
-- 🎛️ **Filters & sorting** — By price, rating, capacity
-- 📱 **Mobile-first design** — Optimized for Android phones with slow connections
-- 🌐 **SEO optimized** — Per-page meta tags, structured data (JSON-LD), sitemap.xml, robots.txt
-- 🍪 **Cookie consent** — GDPR-compliant cookie banner
-- 💰 **Forex banner** — Site-wide price fluctuation notice
-- 📧 **Newsletter signup** — Email subscription form
-- 📊 **Analytics ready** — Google Analytics placeholder included
-- 🔗 **Affiliate links** — Ready for Jumia/Konga affiliate IDs
-- 📄 **404 page** — Custom not-found page
-- ⚡ **Fast loading** — ~103KB gzipped JS bundle
+### Solar Panels (1)
+- **Jinko Solar 450W** - High-efficiency monocrystalline panel (₦95,000)
 
-## 🛠️ Tech Stack
+### Solar Kits (3)
+- **Felicity 3KVA Complete Kit** - All-in-one home system (₦1,250,000)
+- **Sun King Home 40 Plus** - Multi-room lighting kit (₦59,040)
+- **Sun King HomePlus Max** - Premium home system with TV support (₦185,000)
 
-| Technology | Purpose |
-|------------|---------|
-| **React 18** | UI framework |
-| **TypeScript** | Type safety |
-| **Vite 6** | Build tool & dev server |
-| **React Router 6** | Client-side routing |
-| **Tailwind CSS 4** | Utility-first styling |
-| **Lucide React** | Icon library |
-| **react-helmet-async** | Per-page SEO meta tags |
-| **Supabase** | (Installed, ready for backend) |
+### Solar Lanterns (2)
+- **Sun King Pico Plus** - Portable emergency lantern (₦10,000)
+- **Sun King Pro 400** - Bright lantern with USB charging (₦37,255)
+
+### Charge Controllers (1)
+- **Epsolar Tracer 4210AN** - MPPT charge controller (₦75,000)
+
+## 🏢 Brands Covered (9)
+
+- Luminous
+- Felicity Solar
+- Exide
+- Jinko Solar
+- Rubitek
+- Blue Gate
+- Epsolar
+- Pylontech
+- **Sun King** (newly added)
+
+## ✨ Key Features
+
+### Product Reviews
+- Detailed specifications tables
+- Pros and cons analysis
+- Honest verdicts based on specs and buyer feedback
+- FAQs addressing common concerns
+- Price tracking with last verified dates
+- Related product recommendations
+
+### Comparison Tools
+- Side-by-side product comparison
+- Dynamic specification union across products
+- Accessible table design with proper headers
+- Mobile-responsive layout
+
+### Search & Navigation
+- Real-time search with autocomplete
+- Keyboard navigation (Arrow keys, Enter, Escape)
+- Search by product name, brand, category, or specifications
+- Category filtering with price range sliders
+- Sorting by rating, price, or name
+
+### Accessibility
+- Full keyboard navigation support
+- ARIA labels and roles throughout
+- Screen reader friendly
+- Focus indicators on all interactive elements
+- Semantic HTML structure
+- Proper heading hierarchy
+
+### SEO Optimized
+- Unique meta tags per page
+- Structured data (JSON-LD) for products
+- Canonical URLs
+- Open Graph tags for social sharing
+- Sitemap.xml included
+- Robots.txt configured
+
+## 🔗 Official Links
+
+All products now link directly to:
+- **Official manufacturer websites** (e.g., luminousnigeria.com, felicitysolar.com, ng.sunking.com)
+- **Verified marketplace listings** (Jumia Nigeria, Konga, Jiji)
+- **"Visit Official Website"** section on each product page
+
+## 🛠️ Technology Stack
+
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **React Router** - Client-side routing
+- **Tailwind CSS** - Utility-first styling
+- **react-helmet-async** - SEO meta tags
+- **Lucide React** - Icon library
 
 ## 📁 Project Structure
 
 ```
 solar_review_nigeria/
-├── public/
-│   ├── sitemap.xml          # XML sitemap for search engines
-│   └── robots.txt           # Crawler instructions
 ├── src/
 │   ├── components/
-│   │   ├── Header.tsx       # Navigation with search & mobile menu
-│   │   ├── Footer.tsx       # Footer with newsletter & legal links
-│   │   ├── ProductCard.tsx  # Reusable product card component
-│   │   ├── StarRating.tsx   # Star rating display component
-│   │   ├── CookieConsent.tsx # Cookie consent banner
-│   │   └── ForexBanner.tsx  # Price fluctuation notice
+│   │   ├── Header.tsx          # Navigation with search
+│   │   ├── Footer.tsx          # Footer with newsletter
+│   │   ├── ProductCard.tsx     # Product display card
+│   │   ├── StarRating.tsx      # Rating display component
+│   │   ├── CookieConsent.tsx   # Cookie consent banner
+│   │   └── ForexBanner.tsx     # Price fluctuation notice
 │   ├── data/
-│   │   └── products.ts      # All product data, categories, brands, guides
+│   │   └── products.ts         # All product data (14 products)
+│   ├── lib/
+│   │   ├── config.ts           # Site configuration
+│   │   ├── format.ts           # Formatting utilities
+│   │   ├── search.ts           # Search functionality
+│   │   └── validation.ts       # Data validation
 │   ├── pages/
-│   │   ├── Home.tsx         # Landing page
-│   │   ├── CategoryPage.tsx # Product category with filters
-│   │   ├── ProductReview.tsx # Individual product review
-│   │   ├── ComparisonPage.tsx # Side-by-side comparison tool
-│   │   ├── BuyingGuidePage.tsx # Buying guides (list + individual)
-│   │   ├── BlogPage.tsx     # Blog posts (list + individual)
-│   │   ├── BrandPage.tsx    # Brand profiles
-│   │   ├── AboutPage.tsx    # About us & methodology
-│   │   ├── ContactPage.tsx  # Contact form
-│   │   ├── LegalPage.tsx    # Privacy, Terms, Disclaimer, Methodology
-│   │   └── NotFoundPage.tsx # 404 page
-│   ├── App.tsx              # Main app with routing
-│   ├── main.tsx             # Entry point
-│   └── index.css            # Tailwind + custom theme colors
-├── index.html               # HTML template with SEO meta tags
+│   │   ├── Home.tsx            # Homepage
+│   │   ├── CategoryPage.tsx    # Category listings
+│   │   ├── ProductReview.tsx   # Individual product reviews
+│   │   ├── ComparisonPage.tsx  # Product comparison
+│   │   ├── BuyingGuidePage.tsx # Buying guides
+│   │   ├── BlogPage.tsx        # Blog posts
+│   │   ├── BrandPage.tsx       # Brand pages
+│   │   ├── AboutPage.tsx       # About & methodology
+│   │   ├── ContactPage.tsx     # Contact form
+│   │   ├── LegalPage.tsx       # Privacy, Terms, Disclaimer
+│   │   └── NotFoundPage.tsx    # 404 page
+│   ├── App.tsx                 # Main app component
+│   ├── main.tsx                # Entry point
+│   └── index.css               # Global styles
+├── public/
+│   ├── sitemap.xml
+│   └── robots.txt
+├── index.html
 ├── package.json
 ├── tsconfig.json
-├── vite.config.js
-├── README.md
-├── LICENSE
-├── DESCRIPTION.md           # Business description for Flippa/listing
-├── CONTRIBUTING.md          # Contribution guidelines
-├── CHANGELOG.md             # Version history
-├── TODO.md                  # Roadmap & audit findings
-├── SECURITY.md              # Security policy
-├── .env.example             # Environment variables template
-└── .gitignore
+├── vite.config.ts
+└── README.md
 ```
 
 ## 🚀 Getting Started
@@ -121,9 +163,6 @@ cd solar_review_nigeria
 # Install dependencies
 npm install
 
-# Copy environment variables template
-cp .env.example .env.local
-
 # Start development server
 npm run dev
 ```
@@ -136,7 +175,7 @@ The site will be available at `http://localhost:5173`
 npm run build
 ```
 
-Output will be in the `dist/` directory, ready to deploy.
+Output will be in the `dist/` directory.
 
 ### Preview Production Build
 
@@ -144,39 +183,105 @@ Output will be in the `dist/` directory, ready to deploy.
 npm run preview
 ```
 
-## ⚙️ Configuration
+## 🔧 Configuration
 
 ### Environment Variables
 
-Create a `.env.local` file (see `.env.example`):
+Create a `.env.local` file:
 
 ```env
 # Contact form - Get your key at https://web3forms.com
 VITE_WEB3FORMS_KEY=your_web3forms_access_key
 
-# Newsletter - Mailchimp/Brevo API endpoint
+# Newsletter service endpoint
 VITE_NEWSLETTER_API_URL=your_newsletter_api_url
 
-# Google Analytics - Replace with your tracking ID
-VITE_GA_TRACKING_ID=G-XXXXXXXXXX
-
-# Supabase (optional - for backend storage)
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+# Site URL for canonical links
+VITE_SITE_URL=https://solarnaija.com
 ```
 
 ### Connecting Forms
 
-1. **Contact Form**: Sign up at [Web3Forms](https://web3forms.com) (free), get your access key, and add it to `.env.local`
-2. **Newsletter**: Connect to Mailchimp, Brevo, or a Supabase table
-3. **Analytics**: Uncomment the GA script in `index.html` and add your tracking ID
+1. **Contact Form**: Sign up at [Web3Forms](https://web3forms.com) (free) and add your access key
+2. **Newsletter**: Connect to Mailchimp, Brevo, or custom endpoint
+3. **Analytics**: Add Google Analytics or Plausible to `index.html`
 
-### Affiliate Links
+## 📊 Recent Updates
 
-Update product `buyLinks` in `src/data/products.ts` with your actual affiliate URLs:
-- Sign up for [Jumia Nigeria Affiliate Program](https://affiliate.jumia.com.ng/)
-- Sign up for [Konga Affiliate Program](https://www.konga.com/affiliate)
-- Replace placeholder URLs with your tracked links
+### Latest Additions (June 2026)
+
+**New Products:**
+- ✅ Added 5 Sun King products (lanterns, home systems, inverter)
+- ✅ New "Solar Lanterns" category
+- ✅ Sun King brand profile
+
+**Product Links:**
+- ✅ All 14 products linked to official manufacturer websites
+- ✅ Verified marketplace links (Jumia, Konga, Jiji)
+- ✅ "Visit Official Website" section on product pages
+
+**Accessibility & UX:**
+- ✅ Removed all emojis from UI
+- ✅ Enhanced keyboard navigation
+- ✅ Improved ARIA labels and roles
+- ✅ Better focus management
+
+**Code Quality:**
+- ✅ Fixed contact form with proper error handling
+- ✅ Improved search with consistent matching
+- ✅ Enhanced comparison logic
+- ✅ Better price formatting utilities
+- ✅ Type-safe environment variables
+
+## 📝 Content Guidelines
+
+### Review Methodology
+
+All reviews are based on:
+- Published manufacturer specifications
+- Verified buyer feedback from Nigerian platforms
+- Consultation with solar installers
+- Analysis of Nigerian operating conditions
+
+**Important**: We do not claim hands-on testing unless explicitly stated. Our ratings reflect editorial assessments based on available data.
+
+### Adding New Products
+
+To add a new product, edit `src/data/products.ts`:
+
+```typescript
+{
+  id: 'unique-product-id',
+  name: 'Product Name',
+  brand: 'Brand Name',
+  category: 'inverters' | 'batteries' | 'panels' | 'solar-kits' | 'solar-lanterns' | 'charge-controllers',
+  image: 'https://example.com/image.jpg',
+  rating: 4.5, // 0-5
+  price: 100000, // in NGN
+  priceNote: 'Price verification note',
+  verdict: 'Quick 2-3 sentence verdict',
+  specs: { /* key-value pairs */ },
+  pros: ['Pro 1', 'Pro 2'],
+  cons: ['Con 1', 'Con 2'],
+  reviewBody: 'Detailed review text',
+  bestFor: ['Use case 1', 'Use case 2'],
+  faqs: [{ question: 'Q?', answer: 'A' }],
+  buyLinks: [
+    { store: 'Store Name', url: 'https://...', isAffiliate: false }
+  ],
+  manufacturerUrl: 'https://official-website.com',
+  ratingBreakdown: {
+    performance: 4.5,
+    durability: 4.0,
+    valueForMoney: 4.5,
+    easeOfInstallation: 4.0,
+    batteryLife: 4.0 // optional
+  },
+  relatedProducts: ['other-product-id'],
+  updatedAt: 'June 2026',
+  basedOnSpecsAndFeedback: true
+}
+```
 
 ## 🌍 Deployment
 
@@ -198,113 +303,83 @@ vercel
 
 1. Register domain (e.g., solarnaija.com or solarnaija.ng)
 2. Point DNS to your hosting provider
-3. Update canonical URLs in `index.html` and page Helmet tags
+3. Update `VITE_SITE_URL` in environment variables
 
-## 📊 SEO Checklist
+## 📈 SEO & Analytics
 
-- [x] Per-page `<title>` and meta description (via react-helmet-async)
-- [x] Open Graph tags for social sharing
-- [x] Twitter Card meta tags
-- [x] JSON-LD structured data (Product schema) on review pages
-- [x] sitemap.xml with all pages
-- [x] robots.txt
-- [x] Canonical URLs
-- [x] Semantic HTML
-- [x] Lazy-loaded images
-- [ ] Server-side rendering (consider for better indexing)
-- [ ] Google Search Console verification
-- [ ] Bing Webmaster Tools submission
+### Current SEO Features
+- Per-page meta tags (title, description)
+- Open Graph tags for social sharing
+- Twitter Card meta tags
+- JSON-LD structured data for products
+- Canonical URLs
+- Semantic HTML
+- Sitemap.xml
+- Robots.txt
 
-## 📈 Analytics Setup
+### Adding Analytics
 
-### Google Analytics
-1. Create a GA4 property at [analytics.google.com](https://analytics.google.com)
-2. Get your tracking ID (G-XXXXXXXXXX)
-3. Uncomment the GA script in `index.html`
-4. Replace `G-XXXXXXXXXX` with your ID
+**Google Analytics:**
+```html
+<!-- Add to index.html before </head> -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
 
-### Alternative: Plausible (Privacy-friendly)
-1. Sign up at [plausible.io](https://plausible.io)
-2. Add the script to `index.html`
+**Plausible (Privacy-friendly):**
+```html
+<!-- Add to index.html before </head> -->
+<script defer data-domain="solarnaija.com" src="https://plausible.io/js/script.js"></script>
+```
 
 ## 💰 Monetization
 
 ### Current Setup
-- Affiliate links (Jumia, Konga) — ready to activate
-- Ad placement spots — ready for AdSense
+- Affiliate links to Jumia, Konga, and other retailers
+- Ready for Google AdSense integration
+- Newsletter signup for email marketing
 
 ### Next Steps
-1. Apply for [Google AdSense](https://adsense.google.com/) (requires Privacy Policy ✓)
-2. Join Jumia/Konga affiliate programs
-3. Add display ads in strategic positions
+1. Apply for affiliate programs (Jumia, Konga)
+2. Apply for Google AdSense (requires Privacy Policy ✓)
+3. Set up email marketing (Mailchimp/Brevo)
 4. Consider sponsored content (clearly labeled)
-
-## 🧪 Testing
-
-```bash
-# Type checking
-npm run typecheck
-
-# Build (includes production checks)
-npm run build
-```
-
-## 📝 Content Management
-
-Currently, all content is in `src/data/products.ts`. To add a new product:
-
-```typescript
-{
-  id: 'unique-product-id',
-  name: 'Product Name',
-  brand: 'Brand Name',
-  category: 'inverters', // or batteries, panels, solar-kits, charge-controllers
-  image: '/path/to/image.jpg',
-  rating: 4.5,
-  price: 250000,
-  priceNote: 'Prices fluctuate with forex rates. Last verified June 2026.',
-  verdict: 'Quick 2-3 sentence verdict...',
-  specs: { /* key-value pairs */ },
-  pros: ['Pro 1', 'Pro 2'],
-  cons: ['Con 1', 'Con 2'],
-  reviewBody: 'Full review text...',
-  bestFor: ['Use case 1', 'Use case 2'],
-  faqs: [{ question: '...', answer: '...' }],
-  buyLinks: [{ store: 'Jumia', url: 'https://...' }],
-  ratingBreakdown: { performance: 4.5, durability: 4.0, valueForMoney: 4.5, easeOfInstallation: 4.0 },
-  relatedProducts: ['other-product-id'],
-  updatedAt: 'June 2026',
-  basedOnSpecsAndFeedback: true,
-}
-```
 
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## 📄 License
 
-This project is licensed under the MIT License — see [LICENSE](./LICENSE) for details.
+This project is licensed under the MIT License - see [LICENSE](./LICENSE) file for details.
 
-## 🙏 Credits
+## 🙏 Acknowledgments
 
-- Product images generated with AI
+- Product data sourced from official manufacturer websites and verified retailers
 - Icons by [Lucide](https://lucide.dev/)
 - Font: Inter by [Rasmus Andersson](https://rsms.me/)
-- Built with [Vite](https://vitejs.dev/) + [React](https://reactjs.org/)
+- Built with [Vite](https://vitejs.dev/) and [React](https://reactjs.org/)
 
 ## 📞 Contact
 
 - **Email**: hello@solarnaija.com
 - **GitHub**: [@ericprince957-cloud](https://github.com/ericprince957-cloud)
 
-## 🔗 Links
+## 🔗 Quick Links
 
-- [Live Demo](https://solarnaija.vercel.app) _(update with your URL)_
-- [Project Description](./DESCRIPTION.md) — For Flippa/business listing
-- [Roadmap & TODO](./TODO.md) — Audit findings and next steps
-- [Changelog](./CHANGELOG.md) — Version history
+- [Live Demo](https://solar-review-nigeria.vercel.app)
+- [Product Reviews](https://solar-review-nigeria.vercel.app/category/inverters)
+- [Buying Guides](https://solar-review-nigeria.vercel.app/guides)
+- [Compare Products](https://solar-review-nigeria.vercel.app/compare)
+- [About & Methodology](https://solar-review-nigeria.vercel.app/about)
 
 ---
 
-**Made with ☀️ for Nigerian solar buyers**
+**Made with ☀️ for Nigerian solar consumers**
+
+*Last updated: June 2026*
