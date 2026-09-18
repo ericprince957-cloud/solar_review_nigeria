@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Mail, MessageSquare, Send, CheckCircle, Loader2 } from 'lucide-react';
-
-// Web3Forms access key — replace with your own from https://web3forms.com
-const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+import { Mail, MessageSquare, Send, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -21,40 +18,89 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
+    
+    // Clear previous errors
     setError('');
+    
+    // Check if Web3Forms is configured
+    const web3FormsKey = import.meta.env.VITE_WEB3FORMS_KEY;
+    if (!web3FormsKey || web3FormsKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+      setError('Contact form is not configured yet. Please email us directly at hello@solarnaija.com');
+      return;
+    }
+    
+    // Prevent duplicate submissions
+    if (submitting) return;
+    
+    setSubmitting(true);
 
     try {
-      // Submit to Web3Forms (replace with your actual form service)
+      // Trim and prepare form data
+      const trimmedData = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        subject: formData.subject.trim(),
+        message: formData.message.trim(),
+        homeSize: formData.homeSize.trim(),
+        budget: formData.budget.trim(),
+      };
+      
+      // Validate required fields
+      if (!trimmedData.name || !trimmedData.email || !trimmedData.subject || !trimmedData.message) {
+        setError('Please fill in all required fields');
+        setSubmitting(false);
+        return;
+      }
+      
+      // Build message body
+      let messageBody = trimmedData.message;
+      if (trimmedData.homeSize || trimmedData.budget) {
+        messageBody += '\n\n---\n';
+        if (trimmedData.homeSize) messageBody += `Home/Business Size: ${trimmedData.homeSize}\n`;
+        if (trimmedData.budget) messageBody += `Budget Range: ${trimmedData.budget}\n`;
+      }
+      
+      // Submit to Web3Forms
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
         body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          name: formData.name,
-          email: formData.email,
-          subject: `SolarNaija: ${formData.subject}`,
-          message: `${formData.message}\n\n---\nTopic: ${formData.subject}\nHome Size: ${formData.homeSize || 'Not specified'}\nBudget: ${formData.budget || 'Not specified'}`,
+          access_key: web3FormsKey,
+          name: trimmedData.name,
+          email: trimmedData.email,
+          subject: `SolarNaija Contact: ${trimmedData.subject}`,
+          message: messageBody,
+          from_name: 'SolarNaija Website',
         }),
       });
 
-      if (response.ok) {
-        setSubmitted(true);
-      } else {
-        // If Web3Forms isn't configured, still show success for demo
-        // In production, replace this with proper error handling
-        if (WEB3FORMS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-          setSubmitted(true); // Demo mode
-        } else {
-          setError('Something went wrong. Please try again or email us directly at hello@solarnaija.com');
-        }
+      // Parse response
+      let responseData;
+      try {
+        responseData = await response.json();
+      } catch {
+        throw new Error('Invalid response from server');
       }
-    } catch {
-      // Network error — still show success in demo mode
-      if (WEB3FORMS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+
+      // Check if submission was successful
+      if (response.ok && responseData.success) {
         setSubmitted(true);
       } else {
-        setError('Network error. Please try again or email us at hello@solarnaija.com');
+        // API returned an error
+        const errorMessage = responseData.message || 'Failed to send message';
+        setError(`${errorMessage}. Please try again or email us at hello@solarnaija.com`);
+      }
+    } catch (err) {
+      // Network or unexpected error
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+      
+      if (errorMessage.includes('Failed to fetch') || errorMessage.includes('NetworkError')) {
+        setError('Network error. Please check your connection and try again, or email us at hello@solarnaija.com');
+      } else {
+        setError(`Error: ${errorMessage}. Please try again or email us at hello@solarnaija.com`);
       }
     } finally {
       setSubmitting(false);
@@ -64,12 +110,18 @@ export default function ContactPage() {
   if (submitted) {
     return (
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center">
+        <Helmet>
+          <title>Message Sent — SolarNaija</title>
+        </Helmet>
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="w-8 h-8 text-green-600" />
         </div>
         <h1 className="text-2xl font-bold text-gray-900">Message Sent!</h1>
-        <p className="text-gray-600 mt-2">We'll get back to you within 24 hours. Check your email for a confirmation.</p>
-        <Link to="/" className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-solar-500 hover:bg-solar-600 text-white font-semibold rounded-lg transition-colors">
+        <p className="text-gray-600 mt-2">Thank you for contacting us. We'll get back to you within 24-48 hours.</p>
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-solar-500 hover:bg-solar-600 text-white font-semibold rounded-lg transition-colors"
+        >
           Back to Home
         </Link>
       </div>
@@ -105,39 +157,53 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
           {/* Form */}
           <div className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+                  <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Your Name <span className="text-red-500">*</span>
+                  </label>
                   <input
+                    id="contact-name"
                     type="text"
                     required
+                    autoComplete="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-400 focus:border-solar-400 outline-none"
                     placeholder="e.g. Chidi Okonkwo"
+                    aria-required="true"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                  <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email Address <span className="text-red-500">*</span>
+                  </label>
                   <input
+                    id="contact-email"
                     type="email"
                     required
+                    autoComplete="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-400 focus:border-solar-400 outline-none"
                     placeholder="your@email.com"
+                    aria-required="true"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
+                <label htmlFor="contact-subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  Subject <span className="text-red-500">*</span>
+                </label>
                 <select
+                  id="contact-subject"
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-400 focus:border-solar-400 outline-none"
+                  aria-required="true"
                 >
                   <option value="">Select a topic...</option>
                   <option value="recommendation">I need a solar recommendation</option>
@@ -152,8 +218,11 @@ export default function ContactPage() {
               {formData.subject === 'recommendation' && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-solar-50 rounded-lg border border-solar-200">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Home/Business Size</label>
+                    <label htmlFor="contact-home-size" className="block text-sm font-medium text-gray-700 mb-1">
+                      Home/Business Size
+                    </label>
                     <select
+                      id="contact-home-size"
                       value={formData.homeSize}
                       onChange={(e) => setFormData({ ...formData, homeSize: e.target.value })}
                       className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-400 focus:border-solar-400 outline-none"
@@ -169,8 +238,11 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Budget Range</label>
+                    <label htmlFor="contact-budget" className="block text-sm font-medium text-gray-700 mb-1">
+                      Budget Range
+                    </label>
                     <select
+                      id="contact-budget"
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                       className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-400 focus:border-solar-400 outline-none"
@@ -186,30 +258,55 @@ export default function ContactPage() {
               )}
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Message *</label>
+                <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Message <span className="text-red-500">*</span>
+                </label>
                 <textarea
+                  id="contact-message"
                   required
                   rows={5}
+                  minLength={10}
+                  maxLength={2000}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-solar-400 focus:border-solar-400 outline-none resize-none"
                   placeholder="Tell us about your power needs, what appliances you want to run, your location, etc."
+                  aria-required="true"
+                  aria-describedby="message-hint"
                 />
+                <p id="message-hint" className="text-xs text-gray-500 mt-1">
+                  Minimum 10 characters, maximum 2000 characters
+                </p>
               </div>
 
               {error && (
-                <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
-                  {error}
+                <div 
+                  className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700 flex items-start gap-2"
+                  role="alert"
+                  aria-live="polite"
+                >
+                  <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>{error}</span>
                 </div>
               )}
 
               <button
                 type="submit"
                 disabled={submitting}
-                className="flex items-center gap-2 px-6 py-3 bg-solar-500 hover:bg-solar-600 disabled:bg-solar-300 text-white font-semibold rounded-lg transition-colors"
+                className="flex items-center gap-2 px-6 py-3 bg-solar-500 hover:bg-solar-600 disabled:bg-solar-300 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
+                aria-busy={submitting}
               >
-                {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
-                {submitting ? 'Sending...' : 'Send Message'}
+                {submitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>
@@ -222,7 +319,7 @@ export default function ContactPage() {
                 Email Us Directly
               </h3>
               <p className="text-sm text-gray-600 mt-2">hello@solarnaija.com</p>
-              <p className="text-xs text-gray-500 mt-1">We respond within 24 hours</p>
+              <p className="text-xs text-gray-500 mt-1">We respond within 24-48 hours</p>
             </div>
 
             <div className="p-5 bg-solar-50 rounded-xl border border-solar-200">

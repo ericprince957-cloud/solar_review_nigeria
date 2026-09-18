@@ -73,7 +73,7 @@ export default function BuyingGuidePage() {
           <h1 className="text-3xl font-bold text-gray-900 mt-2">{guide.title}</h1>
           <div className="flex items-center gap-4 mt-3 text-sm text-gray-500">
             <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {guide.readTime}</span>
-            <span>Updated June 2026</span>
+            <span>Research-based guide</span>
           </div>
 
           <div className="mt-8 space-y-8">

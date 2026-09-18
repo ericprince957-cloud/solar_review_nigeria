@@ -4,9 +4,16 @@ export interface Product {
   brand: string;
   category: 'inverters' | 'batteries' | 'panels' | 'solar-kits' | 'charge-controllers';
   image: string;
-  rating: number;
-  price: number;
+  imageAlt?: string; // Custom alt text for the product image
+  rating: number; // Editorial/spec-based rating (0-5)
+  ratingSource?: 'editorial' | 'customer' | 'spec-based'; // What the rating represents
+  ratingCount?: number; // Number of customer ratings (if applicable)
+  reviewCount?: number; // Number of customer reviews (if applicable)
+  price: number; // Price in NGN
+  priceVerifiedAt?: string; // ISO date when price was last verified
+  priceSource?: string; // Where the price was sourced from
   priceNote: string;
+  availability?: 'in-stock' | 'out-of-stock' | 'limited' | 'unknown'; // Current availability
   verdict: string;
   specs: Record<string, string>;
   pros: string[];
@@ -14,7 +21,11 @@ export interface Product {
   reviewBody: string;
   bestFor: string[];
   faqs: { question: string; answer: string }[];
-  buyLinks: { store: string; url: string }[];
+  buyLinks: { 
+    store: string; 
+    url: string;
+    isAffiliate?: boolean; // Whether this is an affiliate link
+  }[];
   ratingBreakdown: {
     performance: number;
     durability: number;
@@ -23,8 +34,12 @@ export interface Product {
     batteryLife?: number;
   };
   relatedProducts: string[];
-  updatedAt: string;
-  basedOnSpecsAndFeedback: boolean;
+  updatedAt: string; // ISO date when review was last updated
+  lastUpdated?: string; // Alternative field name for compatibility
+  basedOnSpecsAndFeedback: boolean; // Whether review is based on specs/feedback vs hands-on testing
+  physicallyTested?: boolean; // Whether we physically tested this product
+  manufacturerUrl?: string; // Official manufacturer product page
+  affiliateDisclosure?: string; // Custom affiliate disclosure text
 }
 
 // NOTE: All reviews are based on published manufacturer specifications, verified buyer feedback
