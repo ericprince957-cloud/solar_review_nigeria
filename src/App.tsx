@@ -29,14 +29,19 @@ function App() {
               <Route path="/category/:categoryId" element={<CategoryPage />} />
               <Route path="/reviews/:productId" element={<ProductReview />} />
               <Route path="/compare" element={<ComparisonPage />} />
-              <Route path="/guides/:guideId" element={<BuyingGuidePage />} />
               <Route path="/guides" element={<BuyingGuidePage />} />
+              <Route path="/guides/:guideId" element={<BuyingGuidePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:postId" element={<BlogPage />} />
               <Route path="/brand/:brandId" element={<BrandPage />} />
-              <Route path="/:pageId" element={<LegalPage />} />
+              {/* Legal pages - specific routes before catch-all */}
+              <Route path="/privacy" element={<LegalPage />} />
+              <Route path="/terms" element={<LegalPage />} />
+              <Route path="/disclaimer" element={<LegalPage />} />
+              <Route path="/methodology" element={<LegalPage />} />
+              {/* Catch-all for 404 */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

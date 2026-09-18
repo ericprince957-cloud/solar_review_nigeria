@@ -4,9 +4,13 @@ import { Helmet } from 'react-helmet-async';
 import { products, categories, buyingGuides, blogPosts } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import StarRating from '../components/StarRating';
+import { getCanonicalUrl, SITE_CONFIG } from '../lib/config';
 
 export default function HomePage() {
-  const topRated = [...products].sort((a, b) => b.rating - a.rating).slice(0, 4);
+  const topRated = [...products].sort((a, b) => {
+    const ratingDiff = b.rating - a.rating;
+    return ratingDiff !== 0 ? ratingDiff : a.name.localeCompare(b.name);
+  }).slice(0, 4);
   const latestReviews = products.slice(0, 3);
 
   const categoryIcons: Record<string, React.ReactNode> = {
@@ -20,12 +24,13 @@ export default function HomePage() {
   return (
     <div>
       <Helmet>
-        <title>SolarNaija — Best Solar Inverters, Batteries & Panels for Nigerian Homes (2026)</title>
-        <meta name="description" content="Find the best solar inverters, batteries, panels and solar kits for Nigerian homes. Honest reviews based on specs and buyer feedback. Updated June 2026 with current Naira prices." />
-        <meta property="og:title" content="SolarNaija — Honest Solar Equipment Reviews for Nigeria" />
-        <meta property="og:description" content="Compare solar inverters, batteries, and panels for Nigerian homes. Research-based reviews with current Naira prices." />
+        <title>{`${SITE_CONFIG.name} — Best Solar Inverters, Batteries & Panels for Nigerian Homes`}</title>
+        <meta name="description" content={SITE_CONFIG.description} />
+        <meta property="og:title" content={`${SITE_CONFIG.name} — Honest Solar Equipment Reviews for Nigeria`} />
+        <meta property="og:description" content={SITE_CONFIG.description} />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://solarnaija.com/" />
+        <meta property="og:url" content={getCanonicalUrl()} />
+        <link rel="canonical" href={getCanonicalUrl()} />
       </Helmet>
 
       {/* Hero Section */}
@@ -48,7 +53,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-lg text-gray-300 mt-4 leading-relaxed max-w-2xl">
-              Tired of NEPA wahala and generator noise? We test solar inverters, batteries, and panels in real Nigerian conditions — so you can choose the right setup without wasting money.
+              Tired of NEPA wahala and generator noise? We research solar inverters, batteries, and panels based on specs and real buyer feedback — so you can choose the right setup without wasting money.
             </p>
             <div className="flex flex-wrap gap-3 mt-8">
               <Link
@@ -73,7 +78,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-300">
                 <Clock className="w-5 h-5 text-solar-400" />
-                <span>Updated June 2026</span>
+                <span>Regularly Updated</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-300">
                 <TrendingUp className="w-5 h-5 text-blue-400" />
@@ -108,7 +113,7 @@ export default function HomePage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">⭐ Top Rated Products</h2>
-            <p className="text-gray-600 mt-1">Our highest-rated solar equipment, tested in Nigerian conditions</p>
+            <p className="text-gray-600 mt-1">Our highest-rated solar equipment, reviewed based on specs and buyer feedback</p>
           </div>
           <Link to="/compare" className="hidden sm:flex items-center gap-1 text-sm font-medium text-solar-600 hover:text-solar-700">
             Compare all <ArrowRight className="w-4 h-4" />
@@ -208,7 +213,7 @@ export default function HomePage() {
       {/* Price Comparison Quick View */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">💰 Quick Price Guide (June 2026)</h2>
+          <h2 className="text-2xl font-bold text-gray-900">💰 Quick Price Guide</h2>
           <p className="text-gray-600 mt-2">Current prices for popular solar equipment in Nigeria</p>
         </div>
         <div className="overflow-x-auto">

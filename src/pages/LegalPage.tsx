@@ -1,5 +1,6 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { getCanonicalUrl, SITE_CONFIG } from '../lib/config';
 
 const pages: Record<string, { title: string; content: JSX.Element }> = {
   privacy: {
@@ -225,13 +226,16 @@ const pages: Record<string, { title: string; content: JSX.Element }> = {
 };
 
 export default function LegalPage() {
-  const { pageId } = useParams<{ pageId: string }>();
-  const page = pageId ? pages[pageId] : null;
+  const location = useLocation();
+  // Extract page ID from path (e.g., /privacy -> privacy)
+  const pageId = location.pathname.slice(1); // Remove leading slash
+  const page = pages[pageId] || null;
 
   if (!page) {
     return (
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center">
         <h1 className="text-2xl font-bold text-gray-900">Page not found</h1>
+        <p className="text-gray-600 mt-2">The page you're looking for doesn't exist.</p>
         <Link to="/" className="text-solar-600 hover:underline mt-4 inline-block">← Back to home</Link>
       </div>
     );
@@ -240,9 +244,10 @@ export default function LegalPage() {
   return (
     <div>
       <Helmet>
-        <title>{page.title} — SolarNaija</title>
-        <meta name="description" content={`${page.title} for SolarNaija solar equipment review website.`} />
+        <title>{`${page.title} — ${SITE_CONFIG.name}`}</title>
+        <meta name="description" content={`${page.title} for ${SITE_CONFIG.name} solar equipment review website.`} />
         <meta name="robots" content="noindex" />
+        <link rel="canonical" href={getCanonicalUrl(location.pathname)} />
       </Helmet>
 
       <div className="bg-white border-b border-gray-200">
