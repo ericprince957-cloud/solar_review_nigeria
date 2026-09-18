@@ -136,7 +136,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-gray-900">Why Nigerians Trust Our Reviews</h2>
-            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">We don't just read spec sheets — we install and test every product in real Nigerian homes and businesses</p>
+            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">We research every product using manufacturer specifications, verified buyer feedback, and Nigerian market context — so you can make informed decisions</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">

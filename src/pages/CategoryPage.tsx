@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { SlidersHorizontal, ArrowUpDown, ChevronDown } from 'lucide-react';
@@ -28,6 +28,11 @@ export default function CategoryPage() {
   }, [categoryProducts]);
 
   const [priceRange, setPriceRange] = useState<[number, number]>([priceBounds.min, priceBounds.max]);
+
+  // Reset price range when category changes
+  useEffect(() => {
+    setPriceRange([priceBounds.min, priceBounds.max]);
+  }, [categoryId, priceBounds.min, priceBounds.max]);
 
   // Stable sorting with tie-breaker
   const filteredProducts = useMemo(() => {

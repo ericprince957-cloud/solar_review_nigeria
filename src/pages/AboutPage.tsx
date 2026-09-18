@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <h1 className="text-3xl font-bold text-gray-900">About SolarNaija Reviews</h1>
-        <p className="text-lg text-gray-600 mt-3">Helping Nigerians make smart solar energy decisions since 2023</p>
+        <p className="text-lg text-gray-600 mt-3">Helping Nigerians make smart solar energy decisions</p>
 
         <div className="mt-10 space-y-10">
           {/* Mission */}
@@ -97,7 +97,7 @@ export default function AboutPage() {
               <strong>This does NOT affect our ratings or recommendations.</strong> We give the same honest reviews whether or not we earn a commission. Our reputation depends on trust — we would never compromise that for a few Naira in commissions.
             </p>
             <p className="text-amber-900 mt-3 leading-relaxed">
-              We also accept review units from manufacturers, which is always clearly disclosed in each review. However, we return or donate all review units after testing — we don't keep them.
+              If we receive review units from manufacturers in the future, this will always be clearly disclosed in each review.
             </p>
           </section>
 
