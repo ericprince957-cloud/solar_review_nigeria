@@ -215,7 +215,7 @@ export default function CategoryPage() {
               <ProductCard
                 key={product.id}
                 product={product}
-                badge={i === 0 && sortBy === 'rating' ? '⭐ Highest Rated' : undefined}
+                badge={i === 0 && sortBy === 'rating' ? 'Highest Rated' : undefined}
               />
             ))}
           </div>

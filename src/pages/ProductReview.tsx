@@ -256,7 +256,7 @@ export default function ProductReview() {
 
                 {/* Best For */}
                 <div className="mt-8 p-5 bg-blue-50 border border-blue-200 rounded-xl">
-                  <h3 className="font-bold text-blue-800 mb-3">🎯 Best For</h3>
+                  <h3 className="font-bold text-blue-800 mb-3">Best For</h3>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {product.bestFor.map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-blue-900">

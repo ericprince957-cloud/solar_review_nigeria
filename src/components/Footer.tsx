@@ -201,8 +201,8 @@ export default function Footer() {
               <li><Link to="/methodology" className="text-gray-400 hover:text-solar-400 text-sm transition-colors">Review Methodology</Link></li>
             </ul>
             <div className="mt-4 space-y-1 text-xs text-gray-500">
-              <p>✅ Independent Reviews</p>
-              <p>✅ Specs-Based Analysis</p>
+              <p>Independent Reviews</p>
+              <p>Specs-Based Analysis</p>
             </div>
           </div>
         </div>

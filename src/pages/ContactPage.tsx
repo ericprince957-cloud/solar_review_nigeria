@@ -323,14 +323,14 @@ export default function ContactPage() {
             </div>
 
             <div className="p-5 bg-solar-50 rounded-xl border border-solar-200">
-              <h3 className="font-bold text-solar-800">💡 Quick Tip</h3>
+              <h3 className="font-bold text-solar-800">Quick Tip</h3>
               <p className="text-sm text-solar-900 mt-2">
                 For faster help, include: your location, home size, appliances you want to power, and your budget range.
               </p>
             </div>
 
             <div className="p-5 bg-white rounded-xl border border-gray-200">
-              <h3 className="font-bold text-gray-900">📍 Common Questions</h3>
+              <h3 className="font-bold text-gray-900">Common Questions</h3>
               <ul className="mt-3 space-y-2 text-sm text-gray-600">
                 <li>• How much solar for a 3-bedroom flat?</li>
                 <li>• Best inverter for my budget?</li>

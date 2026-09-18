@@ -142,7 +142,7 @@ export function validateAllProducts(products: Product[]): void {
     const productIds = new Set<string>();
     const duplicateIds: string[] = [];
     
-    console.group('🔍 Validating product data...');
+    console.group('Validating product data...');
     
     products.forEach((product, index) => {
       // Check for duplicate IDs
@@ -155,20 +155,20 @@ export function validateAllProducts(products: Product[]): void {
       const result = validateProduct(product, products);
       
       if (result.errors.length > 0) {
-        console.error(`❌ Product ${index} (${product.id || 'unknown'}):`, result.errors);
+        console.error(`[ERROR] Product ${index} (${product.id || 'unknown'}):`, result.errors);
       }
       
       if (result.warnings.length > 0) {
-        console.warn(`⚠️  Product ${index} (${product.id || 'unknown'}):`, result.warnings);
+        console.warn(`[WARN] Product ${index} (${product.id || 'unknown'}):`, result.warnings);
       }
       
       if (result.valid && result.warnings.length === 0) {
-        console.log(`✅ Product ${index} (${product.id}): Valid`);
+        console.log(`[OK] Product ${index} (${product.id}): Valid`);
       }
     });
     
     if (duplicateIds.length > 0) {
-      console.error('❌ Duplicate product IDs found:', duplicateIds);
+      console.error('[ERROR] Duplicate product IDs found:', duplicateIds);
     }
     
     console.groupEnd();

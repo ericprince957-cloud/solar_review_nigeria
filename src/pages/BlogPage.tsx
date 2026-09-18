@@ -129,7 +129,7 @@ export default function BlogPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        <h1 className="text-3xl font-bold text-gray-900">📰 Blog & News</h1>
+        <h1 className="text-3xl font-bold text-gray-900">Blog & News</h1>
         <p className="text-gray-600 mt-2">Latest updates on solar prices, policy changes, and product launches in Nigeria</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
