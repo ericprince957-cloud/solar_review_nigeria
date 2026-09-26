@@ -4,14 +4,51 @@ import { X } from 'lucide-react';
 
 type ConsentStatus = 'unknown' | 'accepted' | 'declined';
 
+// Google Analytics tracking ID
+const GA_TRACKING_ID = 'G-TR5LJEF0Z7';
+
+// Extend Window interface for Google Analytics
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+  }
+}
+
+// Function to load Google Analytics
+function loadGoogleAnalytics() {
+  // Check if already loaded
+  if (document.getElementById('ga-script')) {
+    return;
+  }
+
+  // Load gtag.js
+  const script = document.createElement('script');
+  script.id = 'ga-script';
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+  document.head.appendChild(script);
+
+  // Initialize gtag
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: unknown[]) {
+    window.dataLayer.push(args);
+  }
+  gtag('js', new Date());
+  gtag('config', GA_TRACKING_ID);
+}
+
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
   const [consentStatus, setConsentStatus] = useState<ConsentStatus>('unknown');
 
   useEffect(() => {
     const stored = localStorage.getItem('solarnaija-cookie-consent');
-    if (stored === 'accepted' || stored === 'declined') {
-      setConsentStatus(stored);
+    if (stored === 'accepted') {
+      setConsentStatus('accepted');
+      // Load GA if user has already accepted
+      loadGoogleAnalytics();
+    } else if (stored === 'declined') {
+      setConsentStatus('declined');
     } else {
       // Show after a short delay to not block initial render
       const timer = setTimeout(() => setVisible(true), 1500);
@@ -23,8 +60,8 @@ export default function CookieConsent() {
     localStorage.setItem('solarnaija-cookie-consent', 'accepted');
     setConsentStatus('accepted');
     setVisible(false);
-    // Analytics would be loaded here if consent is given
-    // For now, no analytics is loaded regardless
+    // Load Google Analytics when user accepts
+    loadGoogleAnalytics();
   };
 
   const handleDecline = () => {
